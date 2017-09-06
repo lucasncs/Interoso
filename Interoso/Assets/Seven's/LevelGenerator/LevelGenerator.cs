@@ -1,3 +1,6 @@
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
@@ -8,12 +11,15 @@ public class LevelGenerator : MonoBehaviour
 
 	void Awake()
 	{
-		GenerateLevel();
+		if (transform.childCount <= 0)
+			GenerateLevel();
 	}
 
-	void GenerateLevel()
+	public void GenerateLevel()
 	{
-		for (int x = 0; x < map.width; x++)
+		EmptyLevel();
+
+        for (int x = 0; x < map.width; x++)
 		{
 			for (int y = 0; y < map.height; y++)
 			{
@@ -37,9 +43,31 @@ public class LevelGenerator : MonoBehaviour
 			if (colorMapping.color.Equals(pixelColor))
 			{
 				Vector2 position = new Vector2(x, y);
-				Instantiate(colorMapping.prefab, position, Quaternion.identity, transform);
+				#if UNITY_EDITOR
+					GameObject go = (GameObject)PrefabUtility.InstantiatePrefab(colorMapping.prefab);
+					go.transform.position = position;
+					go.transform.localRotation = Quaternion.identity;
+					go.transform.parent = transform;
+				#else
+					Instantiate(colorMapping.prefab, position, Quaternion.identity, transform);
+				#endif
 			}
 		}
 	}
 
+	public void EmptyLevel()
+	{
+		// Find all children and eliminate them.
+
+		while (transform.childCount > 0)
+		{
+			Transform c = transform.GetChild(0);
+			c.SetParent(null);
+			#if UNITY_EDITOR
+				DestroyImmediate(c.gameObject);
+			#else
+				Destroy(c.gameObject);
+			#endif
+		}
+	}
 }

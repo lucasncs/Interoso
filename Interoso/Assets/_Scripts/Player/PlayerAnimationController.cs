@@ -34,14 +34,33 @@ public class PlayerAnimationController : MonoBehaviour
 
 		if (Mathf.Abs(valueCheck) >= 0.1f)
 		{
-			Vector3 newScale = visualChild.transform.localScale;
-			newScale.x = Mathf.Abs(newScale.x) * ((valueCheck > 0) ? 1.0f : -1.0f);
-			visualChild.transform.localScale = newScale;
+			//Vector3 newScale = visualChild.transform.localScale;
+			//newScale.x = Mathf.Abs(newScale.x) * ((valueCheck > 0) ? 1.0f : -1.0f);
+			//visualChild.transform.localScale = newScale;
+			SetCurrentFacing((valueCheck > 0) ? 1 : -1);
 		}
+
+		//Vector3 newScale2 = visualChild.transform.localScale;
+		//newScale2.x = Mathf.Abs(newScale2.x) * (_motor.facingLeft ? -1.0f : 1.0f);
+		//visualChild.transform.localScale = newScale2;
 	}
 
 	private void SetCurrentFacingLeft()
 	{
 		_currentFacingLeft = _motor.facingLeft;
+	}
+
+	public void SetCurrentFacing(int faceDir)
+	{
+		if (faceDir != -1 && faceDir != 1)
+		{
+			faceDir = 1;
+			Debug.LogError("Face direction is beeing set wrong on " + gameObject.name);
+        }
+
+		Vector3 newScale = visualChild.transform.localScale;
+		newScale.x = Mathf.Abs(newScale.x) * faceDir;
+		visualChild.transform.localScale = newScale;
+		SetCurrentFacingLeft();
 	}
 }

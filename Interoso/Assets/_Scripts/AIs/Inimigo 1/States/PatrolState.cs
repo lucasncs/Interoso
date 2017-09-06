@@ -3,12 +3,10 @@ using Seven.StateMachine;
 
 public class PatrolState : State<EnemyStateMachine>
 {
+	public PatrolState(EnemyStateMachine machine) : base(machine) { }
+
 	private int waypointIndex;
 	private Vector2 nextDestination;
-
-	public PatrolState(EnemyStateMachine machine) : base(machine)
-	{
-	}
 
 	public override void OnStateEnter()
 	{
@@ -17,6 +15,22 @@ public class PatrolState : State<EnemyStateMachine>
 	}
 
 	public override void Tick()
+	{
+		WalkThroughWayPoints();
+
+		if (machine.InRangeForDetection())
+		{
+			machine.SetState(new ShootState(machine));
+		}
+	}
+
+	public override void OnStateExit()
+	{
+		
+	}
+
+
+	private void WalkThroughWayPoints()
 	{
 		if (ReachedDestination())
 		{
