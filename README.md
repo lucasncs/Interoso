@@ -6,9 +6,9 @@
 
 <h4>Mecânica do chicote:</h4>
 
-* ataca os inimigos;
-* usa para se pendurar: vai pra frente e pra trás, para cima e para baixo;
-* comprimento do chicote = 2x o player;
+* Ataca os inimigos;
+* Usa para se pendurar: vai pra frente e pra trás, para cima e para baixo;
+* Comprimento do chicote = 2x o player;
 
 o chicote é elétrico, ou seja, encostando no inimigo ele será eletrocutado!!
 Cada zumbi deve ser matado com a sua específica cor do choque> zumbi verde (barrinha verde da bateria), vermelho e roxo a mesma coisa 
