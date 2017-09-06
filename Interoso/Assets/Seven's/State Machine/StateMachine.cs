@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Seven.StateMachine
 {
-	public class StateMachine : MonoBehaviour
+	public abstract class StateMachine<T> : StateMachine where T : StateMachine<T>
 	{
-		private State currentState;
-
 		protected virtual void Start()
 		{
 			//SetState(new GenericState(this));
@@ -18,7 +14,7 @@ namespace Seven.StateMachine
 			currentState.Tick();
 		}
 
-		public void SetState(State state)
+		public override void SetState(State state)
 		{
 			if (currentState != null)
 				currentState.OnStateExit();
@@ -29,4 +25,11 @@ namespace Seven.StateMachine
 				currentState.OnStateEnter();
 		}
 	}
+
+	public abstract class StateMachine : MonoBehaviour
+	{
+		protected State currentState;
+
+		public abstract void SetState(State state);
+    }
 }

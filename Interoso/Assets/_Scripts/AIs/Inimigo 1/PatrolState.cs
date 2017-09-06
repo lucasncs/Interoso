@@ -1,16 +1,13 @@
 ﻿using UnityEngine;
 using Seven.StateMachine;
 
-public class PatrolState : State
+public class PatrolState : State<EnemyStateMachine>
 {
-	private EnemyStateMachine machine;
-
 	private int waypointIndex;
 	private Vector2 nextDestination;
 
-	public PatrolState(EnemyStateMachine _machine)
+	public PatrolState(EnemyStateMachine machine) : base(machine)
 	{
-		machine = _machine;
 	}
 
 	public override void OnStateEnter()
@@ -21,7 +18,7 @@ public class PatrolState : State
 
 	public override void Tick()
 	{
-        if (ReachedDestination())
+		if (ReachedDestination())
 		{
 			nextDestination = machine.NextWaypoint(NextIndex());
 		}

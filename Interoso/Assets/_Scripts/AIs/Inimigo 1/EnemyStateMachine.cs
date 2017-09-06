@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Seven.StateMachine;
 
-public class EnemyStateMachine : StateMachine
+public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 {
 	private PlatformerMotor2D _motor;
 
