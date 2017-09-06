@@ -2,9 +2,9 @@
 
 <h2>TODOs</h2>
 
-<h3>Player</h3>
+<h2>Player</h2>
 
-<h4>Mecânica do chicote:</h4>
+<h3>Mecânica do chicote:</h3>
 
 * Ataca os inimigos;
 * Usa para se pendurar: vai pra frente e pra trás, para cima e para baixo;
@@ -13,7 +13,7 @@
 o chicote é elétrico, ou seja, encostando no inimigo ele será eletrocutado!!
 Cada zumbi deve ser matado com a sua específica cor do choque> zumbi verde (barrinha verde da bateria), vermelho e roxo a mesma coisa 
 
-<h3>Inimigos</h3>
+<h2>Inimigos</h2>
 
 * **HUMANO:** atira, mais veloz, menos resistência.
 
@@ -25,10 +25,10 @@ Cada zumbi deve ser matado com a sua específica cor do choque> zumbi verde (bar
 
 * **BOSS:** ainda estamos pensando sobre!!
 
-<h3>Coletáveis</h3>
+<h2>Coletáveis</h2>
 O Player coletará as baterias (munição) para o chicote, vida (autômatos) e livrinhos contendo explicações!!
 
-<h3>HUD</h3>
+<h2>HUD</h2>
 Ter 2 barras na HUD: uma mostrando a vida do player e o outro o nível de bateria do chicote!! Por apresentar 3 tipos de raio (verde, vermelho e roxo), ter alguma tecla para mudar os choques, mudando a cor da barrida da HUD também...
 *ainda estamos pensando em como deixar isso visualmente bonito e funcional*
 
