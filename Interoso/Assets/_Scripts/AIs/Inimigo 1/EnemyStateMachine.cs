@@ -5,7 +5,7 @@ using Seven.StateMachine;
 public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 {
 	private PlatformerMotor2D _motor;
-	private PlayerAnimationController _visual;
+	private AnimationController _visual;
 	
 	public float distForwDetection;
 	public float distBackDetection;
@@ -33,7 +33,7 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 	protected override void Start()
 	{
 		_motor = GetComponent<PlatformerMotor2D>();
-		_visual = GetComponent<PlayerAnimationController>();
+		_visual = GetComponent<AnimationController>();
 
 		for (int i = 0; i < patrolWaypoints.Length; i++)
 		{

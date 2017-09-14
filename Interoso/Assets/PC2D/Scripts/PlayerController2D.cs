@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -14,8 +14,8 @@ public class PlayerController2D : MonoBehaviour
 
 	private Rigidbody2D _body2D;
 	private HookController _hook;
+	
 
-	// Use this for initialization
 	void Start()
 	{
 		_motor = GetComponent<PlatformerMotor2D>();
@@ -23,28 +23,6 @@ public class PlayerController2D : MonoBehaviour
 		_hook = GetComponent<HookController>();
 	}
 
-	// before enter en freedom state for ladders
-	void FreedomStateSave(PlatformerMotor2D motor)
-	{
-		if (!_restored) // do not enter twice
-			return;
-
-		_restored = false;
-		_enableOneWayPlatforms = _motor.enableOneWayPlatforms;
-		_oneWayPlatformsAreWalls = _motor.oneWayPlatformsAreWalls;
-	}
-	// after leave freedom state for ladders
-	void FreedomStateRestore(PlatformerMotor2D motor)
-	{
-		if (_restored) // do not enter twice
-			return;
-
-		_restored = true;
-		_motor.enableOneWayPlatforms = _enableOneWayPlatforms;
-		_motor.oneWayPlatformsAreWalls = _oneWayPlatformsAreWalls;
-	}
-
-	// Update is called once per frame
 	void Update()
 	{
 		// use last state to restore some ladder specific values
@@ -127,23 +105,32 @@ public class PlayerController2D : MonoBehaviour
 		{
 			_hook.UseHook();
 			_motor.enabled = !_hook.isHooked;
-        }
+			_body2D.velocity = Vector2.zero;
+		}
 
 		if (_hook.isHooked)
 		{
-			if (Input.GetButtonDown(PC2D.Input.HORIZONTAL))
+			float dir = Input.GetAxis(PC2D.Input.HORIZONTAL);
+			if (Input.GetButton/*Down*/(PC2D.Input.HORIZONTAL))
 			{
-				float dir = Input.GetAxis(PC2D.Input.HORIZONTAL);
-				//_body2D.AddForce(Vector2.right * 200 * Mathf.Sign(dir));
-				_body2D.velocity += Vector2.right * 2 * Mathf.Sign(dir);
-            }
+				_body2D.AddForce(Vector2.right * Mathf.Sign(dir) * 2);
+				//_body2D.velocity += Vector2.right * Mathf.Sign(dir) * 2;
+				//var v = new Vector2(
+				//	Mathf.Abs(_body2D.velocity.x),
+				//	Mathf.Abs(_body2D.velocity.y)
+				//	);
+				//_body2D.velocity += v * Mathf.Sign(dir);
+				_body2D.velocity = Vector2.ClampMagnitude(_body2D.velocity, 9);
+			}
 			if (Input.GetButtonDown(PC2D.Input.JUMP))
 			{
-				_body2D.velocity = Vector2.zero;
+				//_body2D.velocity += Vector2.right * Mathf.Sign(dir);
+				//_body2D.AddForce(Vector2.right * Mathf.Sign(dir) * 20);
+				StartCoroutine(StopVelocity());
 				_motor.enabled = true;
 				_hook.Stop();
 			}
-        }
+		}
 		#endregion
 	}
 
@@ -151,5 +138,38 @@ public class PlayerController2D : MonoBehaviour
 	{
 		_motor.Jump();
 		_motor.DisableRestrictedArea();
+	}
+
+	IEnumerator StopVelocity()
+	{
+		while (_motor.collidingAgainst == PlatformerMotor2D.CollidedSurface.None)
+		{
+			//_body2D.velocity = Vector2.down * 2;
+			_body2D.velocity = new Vector2(Mathf.Clamp(_body2D.velocity.x, -5, 5), -2);
+			yield return null;
+			print(123);
+		}
+		_body2D.velocity = Vector2.zero;
+	}
+
+	// before enter en freedom state for ladders
+	void FreedomStateSave(PlatformerMotor2D motor)
+	{
+		if (!_restored) // do not enter twice
+			return;
+
+		_restored = false;
+		_enableOneWayPlatforms = _motor.enableOneWayPlatforms;
+		_oneWayPlatformsAreWalls = _motor.oneWayPlatformsAreWalls;
+	}
+	// after leave freedom state for ladders
+	void FreedomStateRestore(PlatformerMotor2D motor)
+	{
+		if (_restored) // do not enter twice
+			return;
+
+		_restored = true;
+		_motor.enableOneWayPlatforms = _enableOneWayPlatforms;
+		_motor.oneWayPlatformsAreWalls = _oneWayPlatformsAreWalls;
 	}
 }

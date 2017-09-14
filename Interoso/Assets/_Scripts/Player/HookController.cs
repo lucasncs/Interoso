@@ -13,34 +13,43 @@ public class HookController : MonoBehaviour
 	[SerializeField]
 	private float distance = 10f;
 	[SerializeField]
-	private float lenght = 5f;
+	private float maxLenght = 5f;
+	[SerializeField]
+	private float minLenght = 1.5f;
 	public LayerMask mask;
+	public LineRenderer visual;
 
 	public bool isHooked { get; private set; }
 
 	void Start()
 	{
 		_hook = GetComponent<DistanceJoint2D>();
-		_hook.enabled = false;
-		_hook.distance = lenght;
-		isHooked = false;
+		_hook.distance = maxLenght;
 		cam = Camera.main;
+
+		Stop();
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
-
+		if (isHooked)
+		{
+			visual.SetPosition(0, transform.position);
+		}
 	}
 
-	public void Stop()
+	private bool Enabled
 	{
-		isHooked = _hook.enabled = false;
+		set
+		{
+			isHooked = _hook.enabled = visual.enabled = value;
+        }
 	}
 
 	public void UseHook()
 	{
 		bool canHook = Hook();
-		isHooked = _hook.enabled = canHook;
+		Enabled = canHook;
 
 		if (canHook)
 		{
@@ -48,11 +57,13 @@ public class HookController : MonoBehaviour
 			_hook.connectedAnchor = hit.point;
 
 			var newDist = Vector2.Distance(transform.position, hit.point);
-			if (newDist < _hook.distance)
-				_hook.distance = newDist;
-			else
-				_hook.distance = lenght;
-        }
+			//_hook.distance = newDist < _hook.distance ? newDist >= minLenght ? newDist : minLenght : maxLenght;
+			//_hook.distance = newDist - 1;
+			_hook.distance = Mathf.Clamp(newDist, minLenght, maxLenght);
+
+			visual.SetPosition(0, transform.position);
+			visual.SetPosition(1, hit.point);
+		}
 	}
 
 	private bool Hook()
@@ -63,4 +74,9 @@ public class HookController : MonoBehaviour
 
 		return hit.collider != null;
     }
+	
+	public void Stop()
+	{
+		Enabled = false;
+	}
 }

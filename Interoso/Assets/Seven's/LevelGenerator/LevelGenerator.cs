@@ -48,9 +48,11 @@ public class LevelGenerator : MonoBehaviour
 					go.transform.position = position;
 					go.transform.localRotation = Quaternion.identity;
 					go.transform.parent = transform;
-				#else
+					if (colorMapping.firstSibling) go.transform.SetAsFirstSibling();
+					else go.transform.SetAsLastSibling();
+#else
 					Instantiate(colorMapping.prefab, position, Quaternion.identity, transform);
-				#endif
+#endif
 			}
 		}
 	}
