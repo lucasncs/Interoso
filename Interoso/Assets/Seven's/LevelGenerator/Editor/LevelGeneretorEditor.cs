@@ -8,12 +8,16 @@ public class LevelGeneretorEditor : Editor
 	{
 		LevelGenerator myTarget = (LevelGenerator)target;
 
-		GUI.enabled = !Application.isPlaying;
+		bool _lock = myTarget.transform.childCount <= 0;
+
+		GUI.enabled = _lock;
 
 		if (GUILayout.Button("Load Level"))
 		{
 			myTarget.GenerateLevel();
 		}
+
+		GUI.enabled = !_lock;
 
 		if (GUILayout.Button("UnLoad Level"))
 		{
@@ -22,6 +26,7 @@ public class LevelGeneretorEditor : Editor
 
 		GUILayout.Space(10);
 
+		GUI.enabled = true;
 		DrawDefaultInspector();
 	}
 }
