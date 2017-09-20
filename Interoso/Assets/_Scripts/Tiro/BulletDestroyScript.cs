@@ -2,8 +2,10 @@
 
 public class BulletDestroyScript : MonoBehaviour
 {
+	[SerializeField]
+	private float destroyTime = 2;
+
 	private Coroutine destroyCoroutine;
-	public float destroyTime = 2;
 	
 	void OnEnable()
 	{
@@ -19,11 +21,20 @@ public class BulletDestroyScript : MonoBehaviour
 
 	public void Destroy()
 	{
-		gameObject.SetActive(false);
+		//gameObject.SetActive(false);
+		Destroy(gameObject);
     }
 
 	void OnDisable()
 	{
 		StopCoroutine(destroyCoroutine);
 	}
+
+	//void OnTriggerEnter2D(Collider2D hit)
+	//{
+	//	if (hit != null)
+	//	{
+	//		Destroy();
+	//	}
+	//}
 }

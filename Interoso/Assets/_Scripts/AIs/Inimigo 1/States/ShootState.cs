@@ -8,6 +8,8 @@ public class ShootState : State<EnemyStateMachine>
 {
 	public ShootState(EnemyStateMachine machine) : base(machine) { }
 
+	private float timer = 0;
+
 	public override void OnStateEnter()
 	{
 		machine.GetComponentInChildren<SpriteRenderer>().color = Color.red;
@@ -18,6 +20,15 @@ public class ShootState : State<EnemyStateMachine>
 	public override void Tick()
 	{
 		// Shooting logic
+		timer += Time.deltaTime;
+		if (timer >= machine.fireRate)
+		{
+			machine.Shoot();
+			timer = 0;
+		}
+
+		machine.LookToPlayer();
+
 
 		if (!machine.InRangeForDetection())
 		{

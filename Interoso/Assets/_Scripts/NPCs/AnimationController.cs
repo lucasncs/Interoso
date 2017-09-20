@@ -62,15 +62,12 @@ public class AnimationController : MonoBehaviour {
 
 	public void SetCurrentFacing(int faceDir)
 	{
-		if (faceDir != -1 && faceDir != 1)
-		{
-			faceDir = 1;
-			Debug.LogError("Face direction is beeing set wrong on " + gameObject.name);
-		}
+		float sign = Mathf.Sign(faceDir);
 
 		Vector3 newScale = visualChild.transform.localScale;
-		newScale.x = Mathf.Abs(newScale.x) * faceDir;
+		newScale.x = Mathf.Abs(newScale.x) * sign;
 		visualChild.transform.localScale = newScale;
 		SetCurrentFacingLeft();
+		_motor.facingLeft = sign == -1 ? true : false;
 	}
 }

@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-public class ScreenBounds
+public class ScreenBounds : MonoBehaviour
 {
-	private static Vector3 min = Camera.main.ScreenToWorldPoint(Vector3.zero);
-	private static Vector3 max = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height));
+	private static Vector3 min;
+	private static Vector3 max;
 
 	public static Vector3 Min
 	{
@@ -22,13 +22,35 @@ public class ScreenBounds
 	}
 
 
-	static Vector3 bottomLeft = Camera.main.ScreenToWorldPoint(Vector3.zero);
-	static Vector3 topRight = Camera.main.ScreenToWorldPoint(new Vector3(
-		Camera.main.pixelWidth, Camera.main.pixelHeight));
+	static Vector3 bottomLeft;
+	static Vector3 topRight;
 
-	public static Rect cameraRect = new Rect(
-		bottomLeft.x,
-		bottomLeft.y,
-		topRight.x - bottomLeft.x,
-		topRight.y - bottomLeft.y);
+	public static Rect cameraRect;
+
+
+	private void SetValues()
+	{
+		min = Camera.main.ScreenToWorldPoint(Vector3.zero);
+		max = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height));
+
+		bottomLeft = Camera.main.ScreenToWorldPoint(Vector3.zero);
+		topRight = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight));
+
+		cameraRect = new Rect(
+			bottomLeft.x,
+			bottomLeft.y,
+			topRight.x - bottomLeft.x,
+			topRight.y - bottomLeft.y
+			);
+	}
+
+	private void Awake()
+	{
+		SetValues();
+	}
+
+	private void Update()
+	{
+		SetValues();
+	}
 }

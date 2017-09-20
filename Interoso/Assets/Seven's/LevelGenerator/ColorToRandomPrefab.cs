@@ -10,7 +10,7 @@ public class ColorToRandomPrefab : ColorToPrefab
 	{
 		get
 		{
-			return randomPrefabs[Random.Range(0, randomPrefabs.Length)];
+			return randomPrefabs[Random.Range(0, randomPrefabs.Length)] ?? prefab;
 		}
 	}
 }

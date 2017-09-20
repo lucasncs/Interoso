@@ -6,12 +6,14 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 {
 	private PlatformerMotor2D _motor;
 	private AnimationController _visual;
+	private Shooter _shot;
 	
 	public float distForwDetection;
 	public float distBackDetection;
 	public LayerMask detectionLayer;
+	public float fireRate = .5f;
 
-	//[HideInInspector]
+	[HideInInspector]
 	public Transform player;
 
 	public Vector2[] patrolWaypoints;
@@ -25,7 +27,7 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 
 		private set
 		{
-			_motor.facingLeft = value == -1 ? true : value == 1 ? false : false;
+			_motor.facingLeft = Mathf.Sign(value) == -1 ? true : false;
 		}
 	}
 
@@ -34,6 +36,7 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 	{
 		_motor = GetComponent<PlatformerMotor2D>();
 		_visual = GetComponent<AnimationController>();
+		_shot = GetComponent<Shooter>();
 
 		for (int i = 0; i < patrolWaypoints.Length; i++)
 		{
@@ -45,7 +48,8 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 
 	public void Move(Vector2 direction, float velocityMultiplier)
 	{
-		_motor.normalizedXMovement = velocityMultiplier * DirectionToGo(direction);
+		faceDirection = DirectionToGo(direction);
+        _motor.normalizedXMovement = velocityMultiplier * faceDirection;
     }
 
 	public void StopMoving()
@@ -98,10 +102,17 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 		if (player)
 		{
 			int i = DirectionToGo(player.transform.position);
-			faceDirection = i;
+			//faceDirection = i;
 			_visual.SetCurrentFacing(i);
 		}
 	}
+
+	public void Shoot()
+	{
+		_shot.Shoot(faceDirection);
+	}
+
+
 
 
 	void OnDrawGizmos()
@@ -113,7 +124,7 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 
 			for (int i = 0; i < patrolWaypoints.Length; i++)
 			{
-				Vector2 globalWaypointPos = /*(Application.isPlaying) ? */patrolWaypoints[i] /*: patrolWaypoints[i] + new Vector2(transform.position.x, transform.position.y)*/;
+				Vector2 globalWaypointPos = (Application.isPlaying) ? patrolWaypoints[i] : patrolWaypoints[i] + new Vector2(transform.position.x, transform.position.y);
 				Gizmos.DrawLine(globalWaypointPos - Vector2.up * size, globalWaypointPos + Vector2.up * size);
 				Gizmos.DrawLine(globalWaypointPos - Vector2.left * size, globalWaypointPos + Vector2.left * size);
 			}

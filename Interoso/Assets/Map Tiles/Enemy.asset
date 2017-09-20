@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 381167ed170df5f46820464b23cde909, type: 3}
   m_Name: Enemy
   m_EditorClassIdentifier: 
-  _color: {r: 0, g: 0, b: 0, a: 0}
+  _color: {r: 1, g: 0, b: 0, a: 1}
   _prefab: {fileID: 1303397863836172, guid: 893ae9fea7658d24cb1f8aae251b66aa, type: 2}
   _firstSibling: 0

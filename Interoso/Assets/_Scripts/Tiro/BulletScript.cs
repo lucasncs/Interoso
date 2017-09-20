@@ -2,10 +2,10 @@
 
 public class BulletScript : MonoBehaviour
 {
-	public float speed = 5;
-	
+	public Vector2 speed;
+
 	void Update()
 	{
-		transform.Translate(0, speed * Time.deltaTime, 0);
+		transform.Translate(speed * Time.deltaTime);
 	}
 }

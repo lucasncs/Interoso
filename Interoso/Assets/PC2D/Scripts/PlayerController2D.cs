@@ -14,6 +14,8 @@ public class PlayerController2D : MonoBehaviour
 
 	private Rigidbody2D _body2D;
 	private HookController _hook;
+
+	private Shooter _shot;
 	
 
 	void Start()
@@ -21,6 +23,7 @@ public class PlayerController2D : MonoBehaviour
 		_motor = GetComponent<PlatformerMotor2D>();
 		_body2D = GetComponent<Rigidbody2D>();
 		_hook = GetComponent<HookController>();
+		_shot = GetComponent<Shooter>();
 	}
 
 	void Update()
@@ -132,6 +135,11 @@ public class PlayerController2D : MonoBehaviour
 			}
 		}
 		#endregion
+
+		if (Input.GetButtonDown(PC2D.Input.SHOOT))
+		{
+			_shot.Shoot(_motor.facingLeft ? -1 : 1);
+		}
 	}
 
 	private void Jump()
@@ -147,7 +155,6 @@ public class PlayerController2D : MonoBehaviour
 			//_body2D.velocity = Vector2.down * 2;
 			_body2D.velocity = new Vector2(Mathf.Clamp(_body2D.velocity.x, -5, 5), -2);
 			yield return null;
-			print(123);
 		}
 		_body2D.velocity = Vector2.zero;
 	}

@@ -24,11 +24,6 @@ public class PatrolState : State<EnemyStateMachine>
 		}
 	}
 
-	public override void OnStateExit()
-	{
-		
-	}
-
 
 	private void WalkThroughWayPoints()
 	{

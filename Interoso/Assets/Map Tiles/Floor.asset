@@ -16,4 +16,3 @@ MonoBehaviour:
   _firstSibling: 0
   randomPrefabs:
   - {fileID: 1342451562914920, guid: b9f39d8a9f9036c4fa38e10062ce398b, type: 2}
-  - {fileID: 1342451562914920, guid: f05e2bd4c781d464cb6828e40d7394a4, type: 2}

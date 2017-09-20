@@ -8,8 +8,9 @@ namespace PC2D
         public const string HORIZONTAL = "Horizontal";
         public const string VERTICAL = "Vertical";
         public const string JUMP = "Jump";
-        public const string HOOK = "Fire1";
-    }
+		public const string SHOOT = "Fire1";
+        public const string HOOK = "Fire2";
+	}
 
     public class Globals
     {

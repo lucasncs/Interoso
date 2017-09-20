@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-	public GameObject shot;
-	public Transform[] muzzles;
-	public AudioClip shotSound;
+	[SerializeField]
+	protected GameObject shot;
+	[SerializeField]
+	protected Transform[] muzzles;
 
 	void Start()
 	{
@@ -14,23 +15,27 @@ public class Shooter : MonoBehaviour
 			Debug.LogError(transform.name + "\nShot is EMPTY", gameObject);
 	}
 
-	public virtual void Shot()
+	public virtual void Shoot(int dir = 1)
 	{
+		float sign = Mathf.Sign(dir);
+
 		if (muzzles.Length == 0)
 		{
-			GoShot(transform);
+			var s = GoShot(transform.position);
+			s.GetComponent<BulletScript>().speed *= sign;
 		}
 		else
 		{
 			foreach (Transform muzzle in muzzles)
 			{
-				GoShot(muzzle);
+				var s = GoShot(muzzle.position);
+				s.GetComponent<BulletScript>().speed *= sign;
 			}
 		}
 	}
 
-	protected void GoShot(Transform pos)
+	protected GameObject GoShot(Vector2 pos)
 	{
-		Instantiate<GameObject>(shot, pos.position, Quaternion.identity);
+		return Instantiate(shot, pos, Quaternion.identity);
 	}
 }
