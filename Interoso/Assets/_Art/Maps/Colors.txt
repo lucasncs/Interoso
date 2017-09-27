@@ -7,5 +7,44 @@ OWP
 0000FFFF
 Player
 
-FF0000FF
-Enemy
+3db38b
+Vegetação Natural
+
+727675
+Barreiras Mecânicas
+
+e07e1f
+Barreiras Instáveis
+
+9a1fe0
+Chicote
+
+e01f1f
+Dano
+
+14d8ea
+Coletáveis
+
+ea14d3
+Vida
+
+1f63e0
+Inimigo Humano
+
+146622
+Inimigo Zumbi
+
+b896eb
+Botão
+
+d4c43e
+Plataforma mível (vai da direita p esquedar ou cima para baixo)
+
+3e695e
+Árvore Mãe
+
+d44c3e
+Alarme (sirene)
+
+
+
