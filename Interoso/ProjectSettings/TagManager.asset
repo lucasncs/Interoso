@@ -7,6 +7,9 @@ TagManager:
   - PlayerShot
   - EnemyShot
   - Enemy
+  - Hurt
+  - Life
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - Static Environment
   - Moving Platforms
   - Player
-  - 
+  - Whip Target
   - 
   - 
   - 

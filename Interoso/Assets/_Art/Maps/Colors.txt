@@ -17,13 +17,13 @@ e07e1f
 Barreiras Instáveis
 
 9a1fe0
-Chicote
+Whip Target
 
 e01f1f
 Dano
 
 14d8ea
-Coletáveis
+Coletável
 
 ea14d3
 Vida
@@ -38,13 +38,10 @@ b896eb
 Botão
 
 d4c43e
-Plataforma mível (vai da direita p esquedar ou cima para baixo)
+Plataforma móvel (vai da direita p esquedar ou cima para baixo)
 
 3e695e
 Árvore Mãe
 
 d44c3e
 Alarme (sirene)
-
-
-

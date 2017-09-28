@@ -188,7 +188,7 @@ MonoBehaviour:
   minLenght: 1.5
   mask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2048
   visual: {fileID: 120876232852276078}
 --- !u!114 &114124260424044836
 MonoBehaviour:
@@ -365,10 +365,10 @@ LineRenderer:
     colorGradient:
       key0:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4278275183
       key1:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4278275183
       key2:
         serializedVersion: 2
         rgba: 0
