@@ -40,7 +40,7 @@ public class LevelGenerator : MonoBehaviour
 
 		foreach (ColorToPrefab colorMapping in colorMappings)
 		{
-			if (colorMapping.color.Equals(pixelColor))
+			if (colorMapping.color.Equals(pixelColor) && colorMapping.prefab != null)
 			{
 				Vector2 position = new Vector2(x, y);
 				#if UNITY_EDITOR
@@ -50,9 +50,9 @@ public class LevelGenerator : MonoBehaviour
 					go.transform.parent = transform;
 					if (colorMapping.firstSibling) go.transform.SetAsFirstSibling();
 					else go.transform.SetAsLastSibling();
-#else
+				#else
 					Instantiate(colorMapping.prefab, position, Quaternion.identity, transform);
-#endif
+				#endif
 			}
 		}
 	}
