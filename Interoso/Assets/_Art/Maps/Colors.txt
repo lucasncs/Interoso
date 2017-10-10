@@ -45,3 +45,9 @@ Plataforma móvel (vai da direita p esquedar ou cima para baixo)
 
 d44c3e
 Alarme (sirene)
+
+602121
+Parede
+
+414443
+paredes/chao da fase 4
