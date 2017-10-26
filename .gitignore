@@ -17,6 +17,7 @@ sysinfo.txt
 # VS/MD solution and project files
 ###
 [Ee]xportedObj/
+.vs/
 *.booproj
 *.csproj
 *.sln
@@ -26,7 +27,6 @@ sysinfo.txt
 *.user
 *.userprefs
 *.pidb
-.DS_Store
 
 ###
 # OS generated

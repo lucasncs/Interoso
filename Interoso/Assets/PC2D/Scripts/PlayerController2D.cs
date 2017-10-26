@@ -139,6 +139,8 @@ public class PlayerController2D : MonoBehaviour
 		if (Input.GetButtonDown(PC2D.Input.SHOOT))
 		{
 			_shot.Shoot(_motor.facingLeft ? -1 : 1);
+			_motor.frozen = true;
+			this.Invoke(() => _motor.frozen = false, .6f);
 		}
 	}
 
