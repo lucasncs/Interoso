@@ -50,6 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Pickup
+    uniqueID: 3554841
+    locked: 0
   - name: Foreground
     uniqueID: 613176695
     locked: 0

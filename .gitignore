@@ -27,6 +27,7 @@ sysinfo.txt
 *.user
 *.userprefs
 *.pidb
+*.ide
 
 ###
 # OS generated

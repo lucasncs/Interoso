@@ -60,10 +60,16 @@ namespace Seven.Stats
 	        }
 	    }
 
-	    Stat()
+	    public void Initialize()
 	    {
 	        MaxVal = _maxVal;
 	        Value = _value;
+
+			if (_bar != null)
+			{
+				_bar.MaxValue = _maxVal;
+				_bar.Value = _value;
+			}
 	    }
 	}
 }

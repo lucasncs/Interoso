@@ -17,6 +17,11 @@ public class StatsController : MonoBehaviour
 		}
 	}
 
+	protected virtual void Awake()
+	{
+		health.Initialize();
+	}
+
 	public virtual void Damage(int dmg)
 	{
 		health.Value -= dmg;
