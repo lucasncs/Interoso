@@ -10,6 +10,7 @@ TagManager:
   - Hurt
   - Life
   - Button
+  - EnemyMelee
   layers:
   - Default
   - TransparentFX

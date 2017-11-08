@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Seven.StateMachine;
+using UnityEngine;
 
-public class ShootState : State<EnemyStateMachine>
+public class MeleeState : State<EnemyStateMachine>
 {
-	public ShootState(EnemyStateMachine machine) : base(machine) { }
+	public MeleeState(EnemyStateMachine machine) : base(machine) { }
 
 	private float timer = 0;
 
@@ -13,23 +13,27 @@ public class ShootState : State<EnemyStateMachine>
 	{
 		machine.GetComponentInChildren<SpriteRenderer>().color = Color.red;
 		machine.LookToPlayer();
-		machine.StopMoving();
 
-		timer = 0;
+		timer = machine.fireRate;
 	}
 
 	public override void Tick()
 	{
-		// Shooting logic
-		timer += Time.deltaTime;
-		if (timer >= machine.fireRate)
+		if (machine.InRangeToAttack())
 		{
-			machine.Attack();
-			timer = 0;
+			machine.StopMoving();
+
+			timer += Time.deltaTime;
+			if (timer >= machine.fireRate)
+			{
+				machine.Attack();
+				timer = 0;
+			}
 		}
+		else
+			machine.Move(machine.player.transform.position, machine.walkSpeed * 2.5f);
 
 		machine.LookToPlayer();
-
 
 		if (!machine.InRangeForDetection())
 		{

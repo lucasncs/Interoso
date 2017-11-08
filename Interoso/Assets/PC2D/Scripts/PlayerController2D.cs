@@ -136,7 +136,7 @@ public class PlayerController2D : MonoBehaviour
 		}
 		#endregion
 
-		if (Input.GetButtonDown(PC2D.Input.SHOOT))
+		if (Input.GetButtonDown(PC2D.Input.SHOOT) && !_motor.frozen)
 		{
 			_shot.Shoot(_motor.facingLeft ? -1 : 1);
 			_motor.frozen = true;

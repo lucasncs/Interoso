@@ -4,8 +4,9 @@ using Seven.StateMachine;
 
 public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 {
-	private PlatformerMotor2D _motor;
-	private AnimationController _visual;
+	[SerializeField]
+	protected PlatformerMotor2D _motor;
+	protected AnimationController _visual;
 	
 	public float distForwDetection;
 	public float distBackDetection;
@@ -17,6 +18,8 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 
 	[HideInInspector]
 	public Transform player;
+
+	public float walkSpeed = .3f;
 
 	public Vector2[] patrolWaypoints;
 
@@ -82,6 +85,11 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 		return false;
 	}
 
+	public virtual bool InRangeToAttack()
+	{
+		return InRangeForDetection();
+	}
+
 	protected bool ThrowDetectionRaycast(Vector2 dir, float distance)
 	{
 		RaycastHit2D hit = Physics2D.Raycast(
@@ -103,14 +111,14 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 		if (player)
 		{
 			int i = DirectionToGo(player.transform.position);
-			//FaceDirection = i;
+			FaceDirection = i;
 			_visual.SetCurrentFacing(i);
 		}
 	}
 
 	public virtual void Attack()
 	{
-
+		// Control attck anim
 	}
 
 
@@ -139,6 +147,14 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 			Gizmos.DrawLine(transform.position, to(distForwDetection, FaceDirection));
 			Gizmos.DrawLine(transform.position, to(distBackDetection, -FaceDirection));
 		}
+	}
+
+	protected virtual void OnDrawGizmosSelected()
+	{
+		Gizmos.color = Color.red;
+		System.Func<float, float, Vector2> to = (dist, dir) => new Vector2(dist * dir + transform.position.x, transform.position.y);
+		Gizmos.DrawLine(transform.position, to(distForwDetection, FaceDirection));
+		Gizmos.DrawLine(transform.position, to(distBackDetection, -FaceDirection));
 	}
 
 	void Reset()

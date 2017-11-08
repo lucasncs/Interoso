@@ -15,7 +15,8 @@ public class EnemyStats : StatsController
 		if (hit.gameObject.CompareTag("PlayerShot"))
 		{
 			Damage(20);
-			hit.GetComponent<BulletDestroyScript>().Destroy();
+			print(123);
+			//hit.GetComponent<BulletDestroyScript>().Destroy();
 		}
 	}
 }

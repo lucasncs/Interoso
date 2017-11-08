@@ -17,5 +17,11 @@ public class PlayerStats : StatsController
 			Damage(10);
 			hit.GetComponent<BulletDestroyScript>().Destroy();
 		}
+
+		if (hit.gameObject.CompareTag("EnemyMelee"))
+		{
+			Damage(20);
+			hit.GetComponent<BulletDestroyScript>().Destroy();
+		}
 	}
 }
