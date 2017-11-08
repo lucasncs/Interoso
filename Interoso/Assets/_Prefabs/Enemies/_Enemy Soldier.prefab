@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114013582460761916}
   - component: {fileID: 114577827616413426}
   - component: {fileID: 114261518242000432}
-  - component: {fileID: 114085515311696194}
+  - component: {fileID: 114856649666288496}
   - component: {fileID: 114097160850620962}
   - component: {fileID: 50134863479607364}
   m_Layer: 0
@@ -166,27 +166,6 @@ MonoBehaviour:
     _bar: {fileID: 0}
     _maxVal: 20
     _value: 20
---- !u!114 &114085515311696194
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303397863836172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdb7a06c332873044b2d5618161daa23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distForwDetection: 10
-  distBackDetection: 5
-  detectionLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  fireRate: 0.5
-  player: {fileID: 0}
-  patrolWaypoints:
-  - {x: 2, y: 0}
-  - {x: -2, y: 0}
 --- !u!114 &114097160850620962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,6 +263,27 @@ MonoBehaviour:
   movingPlatformDebug: 0
   iterationDebug: 0
   slopeNormal: {x: 0, y: 0}
+--- !u!114 &114856649666288496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1303397863836172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079055f16308ad346b5ceb2122e3881f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distForwDetection: 10
+  distBackDetection: 5
+  detectionLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  fireRate: 1
+  player: {fileID: 0}
+  patrolWaypoints:
+  - {x: 2, y: 0}
+  - {x: -2, y: 0}
 --- !u!212 &212260613724519430
 SpriteRenderer:
   m_ObjectHideFlags: 1

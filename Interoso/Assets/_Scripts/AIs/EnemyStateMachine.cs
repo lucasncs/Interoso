@@ -6,19 +6,21 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 {
 	private PlatformerMotor2D _motor;
 	private AnimationController _visual;
-	private Shooter _shot;
 	
 	public float distForwDetection;
 	public float distBackDetection;
 	public LayerMask detectionLayer;
 	public float fireRate = .5f;
 
+	public State PatrolState;
+	public State AttackState;
+
 	[HideInInspector]
 	public Transform player;
 
 	public Vector2[] patrolWaypoints;
 
-	public int faceDirection
+	public int FaceDirection
 	{
 		get
 		{
@@ -36,20 +38,19 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 	{
 		_motor = GetComponent<PlatformerMotor2D>();
 		_visual = GetComponent<AnimationController>();
-		_shot = GetComponent<Shooter>();
 
 		for (int i = 0; i < patrolWaypoints.Length; i++)
 		{
 			patrolWaypoints[i] = patrolWaypoints[i] + new Vector2(transform.position.x, transform.position.y);
 		}
-
-		SetState(new PatrolState(this));
+		
+		SetState(PatrolState);
 	}
 
 	public void Move(Vector2 direction, float velocityMultiplier)
 	{
-		faceDirection = DirectionToGo(direction);
-        _motor.normalizedXMovement = velocityMultiplier * faceDirection;
+		FaceDirection = DirectionToGo(direction);
+        _motor.normalizedXMovement = velocityMultiplier * FaceDirection;
     }
 
 	public void StopMoving()
@@ -57,7 +58,7 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 		_motor.normalizedXMovement = 0;
     }
 
-	private int DirectionToGo(Vector2 dir)
+	protected int DirectionToGo(Vector2 dir)
 	{
 		Vector2 relativePoint = transform.InverseTransformPoint(dir);
 		if (relativePoint.x < 0.0) //Point is to the left
@@ -81,7 +82,7 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 		return false;
 	}
 
-	private bool ThrowDetectionRaycast(Vector2 dir, float distance)
+	protected bool ThrowDetectionRaycast(Vector2 dir, float distance)
 	{
 		RaycastHit2D hit = Physics2D.Raycast(
 			transform.position,
@@ -102,15 +103,16 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 		if (player)
 		{
 			int i = DirectionToGo(player.transform.position);
-			//faceDirection = i;
+			//FaceDirection = i;
 			_visual.SetCurrentFacing(i);
 		}
 	}
 
-	public void Shoot()
+	public virtual void Attack()
 	{
-		_shot.Shoot(faceDirection);
+
 	}
+
 
 
 
@@ -134,8 +136,8 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 		{
 			Gizmos.color = Color.red;
 			System.Func<float, float, Vector2> to = (dist, dir) => new Vector2(dist * dir + transform.position.x, transform.position.y);
-			Gizmos.DrawLine(transform.position, to(distForwDetection, faceDirection));
-			Gizmos.DrawLine(transform.position, to(distBackDetection, -faceDirection));
+			Gizmos.DrawLine(transform.position, to(distForwDetection, FaceDirection));
+			Gizmos.DrawLine(transform.position, to(distBackDetection, -FaceDirection));
 		}
 	}
 

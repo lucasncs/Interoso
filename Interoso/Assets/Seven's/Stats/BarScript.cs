@@ -31,7 +31,6 @@ namespace Seven.Stats
 	    {
 	        set
 	        {
-	            //string[] tmp = valueText.text.Split(':');
 	            if(valueText) valueText.text = value + " / " + MaxValue;
 	            currentValue = value;
 	            fillAmount = Map(value, 0, MaxValue, 0, 1);
@@ -83,7 +82,6 @@ namespace Seven.Stats
 
 	    public void UpdateBar()
 	    {
-	        //fillAmount = Map(currentValue, 0, MaxValue, 0, 1);
 	        currentValue = Mathf.Ceil(MaxValue * fillAmount);
 	        Value = currentValue;
 

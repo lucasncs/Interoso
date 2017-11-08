@@ -20,7 +20,8 @@ public class PatrolState : State<EnemyStateMachine>
 
 		if (machine.InRangeForDetection())
 		{
-			machine.SetState(new ShootState(machine));
+			//machine.SetState(new ShootState(machine));
+			machine.SetState(machine.AttackState);
 		}
 	}
 

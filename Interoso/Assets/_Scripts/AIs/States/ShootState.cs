@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Seven.StateMachine;
-using System;
 
 public class ShootState : State<EnemyStateMachine>
 {
@@ -23,7 +22,7 @@ public class ShootState : State<EnemyStateMachine>
 		timer += Time.deltaTime;
 		if (timer >= machine.fireRate)
 		{
-			machine.Shoot();
+			machine.Attack();
 			timer = 0;
 		}
 
@@ -32,7 +31,12 @@ public class ShootState : State<EnemyStateMachine>
 
 		if (!machine.InRangeForDetection())
 		{
-			machine.SetState(new PatrolState(machine));
+			machine.SetState(machine.PatrolState);
 		}
+	}
+
+	public override void OnStateExit()
+	{
+		timer = 0;
 	}
 }
