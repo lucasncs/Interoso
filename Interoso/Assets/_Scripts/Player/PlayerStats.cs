@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Seven.Stats;
 
-public class PlayerStats : StatsController
+public class PlayerStats : StatsController<StatWithBar>
 {
+	protected override void Awake()
+	{
+		//base.Awake();
+		health.Initialize();
+	}
+
 	protected override void Death()
 	{
 		base.Death();
@@ -22,6 +29,12 @@ public class PlayerStats : StatsController
 		{
 			Damage(20);
 			hit.GetComponent<BulletDestroyScript>().Destroy();
+		}
+
+		if (hit.gameObject.CompareTag("Life"))
+		{
+			health.Value = health.MaxVal;
+			Destroy(hit.gameObject);
 		}
 	}
 }

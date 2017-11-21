@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using Seven.Stats;
 
-public class StatsController : MonoBehaviour
+public class StatsController<T> : MonoBehaviour where T : Stat
 {
 	[SerializeField]
-	private Stat health;
+	protected T health;
 
 	public System.Action OnTakeDamage;
 	public System.Action OnDeath;
 
-	public Stat Health
+	public T Health
 	{
 		get
 		{

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 381167ed170df5f46820464b23cde909, type: 3}
-  m_Name: "Barreiras Inst\xE1veis"
+  m_Name: Corner
   m_EditorClassIdentifier: 
-  _color: {r: 0.8784314, g: 0.49411765, b: 0.12156863, a: 1}
-  _prefab: {fileID: 1716697604734824, guid: d349893a579d5a842adc55d58e1e892b, type: 2}
+  _color: {r: 0.28627452, g: 0.21176471, b: 0.21176471, a: 1}
+  _prefab: {fileID: 1342451562914920, guid: 6fb10018e22d68245a8318ae6650540c, type: 2}
   _firstSibling: 0

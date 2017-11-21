@@ -3,14 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //TODO: colocar uns eventos para quando o personagem virar para atualizar as anims
-public class AnimationController : MonoBehaviour {
+public class AnimationController : MonoBehaviour
+{
 
 	public GameObject visualChild;
 
 	protected PlatformerMotor2D _motor;
-	//protected Animator _animator;
+	protected Animator _animator;
 	//protected bool _isJumping;
 	protected bool _currentFacingLeft;
+
+	public Animator Animator
+	{
+		get
+		{
+			return _animator;
+		}
+	}
 
 	protected virtual bool TurnCondictions
 	{
@@ -19,14 +28,14 @@ public class AnimationController : MonoBehaviour {
 			return _motor.motorState == PlatformerMotor2D.MotorState.Slipping ||
 			_motor.motorState == PlatformerMotor2D.MotorState.Dashing ||
 			_motor.motorState == PlatformerMotor2D.MotorState.Jumping;
-        }
+		}
 	}
 
 	protected virtual void Start()
 	{
 		_motor = GetComponent<PlatformerMotor2D>();
 
-		//_animator = visualChild.GetComponent<Animator>();
+		_animator = visualChild.GetComponent<Animator>();
 		//_animator.Play("Idle");
 
 		_motor.onJump += SetCurrentFacingLeft;
@@ -69,5 +78,10 @@ public class AnimationController : MonoBehaviour {
 		visualChild.transform.localScale = newScale;
 		SetCurrentFacingLeft();
 		_motor.facingLeft = sign == -1 ? true : false;
+	}
+
+	public void SetCurrentAnimation(string anim)
+	{
+		_animator.Play(anim);
 	}
 }

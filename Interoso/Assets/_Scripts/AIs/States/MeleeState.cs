@@ -11,7 +11,6 @@ public class MeleeState : State<EnemyStateMachine>
 
 	public override void OnStateEnter()
 	{
-		machine.GetComponentInChildren<SpriteRenderer>().color = Color.red;
 		machine.LookToPlayer();
 
 		timer = machine.fireRate;
@@ -21,6 +20,7 @@ public class MeleeState : State<EnemyStateMachine>
 	{
 		if (machine.InRangeToAttack())
 		{
+			machine.Animation.AttackState = true;
 			machine.StopMoving();
 
 			timer += Time.deltaTime;
@@ -31,7 +31,10 @@ public class MeleeState : State<EnemyStateMachine>
 			}
 		}
 		else
+		{
+			machine.Animation.AttackState = false;
 			machine.Move(machine.player.transform.position, machine.walkSpeed * 2.5f);
+		}
 
 		machine.LookToPlayer();
 
@@ -39,5 +42,11 @@ public class MeleeState : State<EnemyStateMachine>
 		{
 			machine.SetState(machine.PatrolState);
 		}
+	}
+
+	public override void OnStateExit()
+	{
+		machine.Attack(false);
+		machine.Animation.AttackState = false;
 	}
 }

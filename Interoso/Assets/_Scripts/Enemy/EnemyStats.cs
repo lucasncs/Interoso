@@ -1,21 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Seven.Stats;
 using UnityEngine;
 
-public class EnemyStats : StatsController
+public class EnemyStats : StatsController<Stat>
 {
-	protected override void Death()
-	{
-		base.Death();
-		gameObject.SetActive(false);
-	}
-
 	void OnTriggerEnter2D(Collider2D hit)
 	{
 		if (hit.gameObject.CompareTag("PlayerShot"))
 		{
 			Damage(20);
-			print(123);
 			//hit.GetComponent<BulletDestroyScript>().Destroy();
 		}
 	}

@@ -28,8 +28,9 @@ public class EnemyBrawlerStateMachine : EnemyStateMachine
 		return false;
 	}
 
-	public override void Attack()
+	public override void Attack(bool attk = true)
 	{
+		base.Attack(attk);
 		//if (attck != null) StopCoroutine(attck);
 
 		//meleeCollider.enabled = true;

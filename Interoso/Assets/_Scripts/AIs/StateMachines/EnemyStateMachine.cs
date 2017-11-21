@@ -1,13 +1,15 @@
 ﻿using System;
 using UnityEngine;
 using Seven.StateMachine;
+using System.Collections;
 
 public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 {
 	[SerializeField]
 	protected PlatformerMotor2D _motor;
-	protected AnimationController _visual;
-	
+	protected EnemyAnimationController _visual;
+	protected EnemyStats _stats;
+
 	public float distForwDetection;
 	public float distBackDetection;
 	public LayerMask detectionLayer;
@@ -23,12 +25,20 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 
 	public Vector2[] patrolWaypoints;
 
+	public EnemyAnimationController Animation
+	{
+		get
+		{
+			return _visual;
+		}
+	}
+
 	public int FaceDirection
 	{
 		get
 		{
 			return _motor.facingLeft ? -1 : 1;
-        }
+		}
 
 		private set
 		{
@@ -40,26 +50,36 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 	protected override void Start()
 	{
 		_motor = GetComponent<PlatformerMotor2D>();
-		_visual = GetComponent<AnimationController>();
+		_visual = GetComponent<EnemyAnimationController>();
+		_stats = GetComponent<EnemyStats>();
+
+		_stats.OnDeath += OnDeath;
+		_stats.OnTakeDamage += OnTakeDamage;
 
 		for (int i = 0; i < patrolWaypoints.Length; i++)
 		{
 			patrolWaypoints[i] = patrolWaypoints[i] + new Vector2(transform.position.x, transform.position.y);
 		}
-		
+
 		SetState(PatrolState);
+	}
+
+	protected override void Update()
+	{
+		if (!_visual.Damage)
+			base.Update();
 	}
 
 	public void Move(Vector2 direction, float velocityMultiplier)
 	{
 		FaceDirection = DirectionToGo(direction);
-        _motor.normalizedXMovement = velocityMultiplier * FaceDirection;
-    }
+		_motor.normalizedXMovement = velocityMultiplier * FaceDirection;
+	}
 
 	public void StopMoving()
 	{
 		_motor.normalizedXMovement = 0;
-    }
+	}
 
 	protected int DirectionToGo(Vector2 dir)
 	{
@@ -78,7 +98,7 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 	public bool InRangeForDetection()
 	{
 		Vector2 dir = _motor.facingLeft ? Vector2.left : Vector2.right;
-        if (ThrowDetectionRaycast(dir, distForwDetection) || ThrowDetectionRaycast(-dir, distBackDetection))
+		if (ThrowDetectionRaycast(dir, distForwDetection) || ThrowDetectionRaycast(-dir, distBackDetection))
 		{
 			return true;
 		}
@@ -116,9 +136,38 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 		}
 	}
 
-	public virtual void Attack()
+	public virtual void Attack(bool attk = true)
 	{
 		// Control attck anim
+		_visual.Attack = attk;
+	}
+
+
+	private void OnTakeDamage()
+	{
+		_visual.Damage = true;
+		this.Invoke(() => _visual.Damage = false, _visual.damageDuration);
+	}
+
+	private void OnDeath()
+	{
+		StartCoroutine(DeathFade());
+		enabled = false;
+		_visual.Animator.enabled = false;
+	}
+	private IEnumerator DeathFade()
+	{
+		SpriteRenderer rendr = _visual.visualChild.GetComponent<SpriteRenderer>();
+		Color c = rendr.color;
+
+		while (c.a > 0)
+		{
+			c.a -= Time.deltaTime * 5;
+			rendr.color = c;
+			yield return null;
+		}
+
+		gameObject.SetActive(false);
 	}
 
 

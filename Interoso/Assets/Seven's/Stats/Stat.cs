@@ -3,18 +3,80 @@
 namespace Seven.Stats
 {
 	[System.Serializable]
+	public class StatWithBar : Stat
+	{
+		[SerializeField]
+		private BarScript _bar;
+
+		public override float Value
+		{
+			get
+			{
+				return base.Value;
+			}
+
+			set
+			{
+				base.Value = value;
+				if (_bar)
+				{
+					_bar.Value = _value;
+				}
+			}
+		}
+
+		public override float MaxVal
+		{
+			get
+			{
+				return base.MaxVal;
+			}
+
+			set
+			{
+				base.MaxVal = value;
+				if (_bar)
+				{
+					_bar.MaxValue = _maxVal;
+				}
+			}
+		}
+
+		public BarScript VisualBar
+		{
+			get
+			{
+				return _bar;
+			}
+			private set
+			{
+				_bar = value;
+			}
+		}
+
+		public override void Initialize()
+		{
+			base.Initialize();
+	        MaxVal = _maxVal;
+
+			if (_bar != null)
+			{
+				_bar.MaxValue = _maxVal;
+				_bar.Value = _value;
+			}
+		}
+	}
+
+	[System.Serializable]
 	public class Stat
 	{
 	    [SerializeField]
-	    private BarScript _bar;
+		protected float _maxVal;
 
 	    [SerializeField]
-	    private float _maxVal;
+	    protected float _value;
 
-	    [SerializeField]
-	    private float _value;
-
-	    public float Value
+	    public virtual float Value
 	    {
 	        get
 	        {
@@ -24,14 +86,10 @@ namespace Seven.Stats
 	        set
 	        {
 	            _value = Mathf.Clamp(value, 0, MaxVal);
-	            if (_bar)
-	            {
-	                _bar.Value = _value;
-	            }
 	        }
 	    }
 
-	    public float MaxVal
+	    public virtual float MaxVal
 	    {
 	        get
 	        {
@@ -41,35 +99,13 @@ namespace Seven.Stats
 	        set
 	        {
 	            _maxVal = value;
-	            if (_bar)
-	            {
-	                _bar.MaxValue = _maxVal;
-	            }
 	        }
 	    }
 
-	    public BarScript VisualBar
-	    {
-	        get
-	        {
-	            return _bar;
-	        }
-	        set
-	        {
-	            _bar = value;
-	        }
-	    }
 
-	    public void Initialize()
+		public virtual void Initialize()
 	    {
-	        MaxVal = _maxVal;
 	        Value = _value;
-
-			if (_bar != null)
-			{
-				_bar.MaxValue = _maxVal;
-				_bar.Value = _value;
-			}
 	    }
 	}
 }

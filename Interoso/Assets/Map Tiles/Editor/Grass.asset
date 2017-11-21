@@ -9,10 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35d292c0145c5f44b95b6a421e83e573, type: 3}
-  m_Name: "Barreiras Mec\xE2nicas"
+  m_Name: Grass
   m_EditorClassIdentifier: 
-  _color: {r: 0.44705883, g: 0.4627451, b: 0.45882353, a: 1}
+  _color: {r: 0, g: 0, b: 0, a: 1}
   _prefab: {fileID: 0}
   _firstSibling: 0
   randomPrefabs:
-  - {fileID: 1258149874690116, guid: 80757a32eafba5448b2989995dc51893, type: 2}
+  - {fileID: 1342451562914920, guid: b9f39d8a9f9036c4fa38e10062ce398b, type: 2}
+  - {fileID: 1342451562914920, guid: f05e2bd4c781d464cb6828e40d7394a4, type: 2}
+  - {fileID: 1342451562914920, guid: 678f7bac9f281004ab582f53a79f8575, type: 2}

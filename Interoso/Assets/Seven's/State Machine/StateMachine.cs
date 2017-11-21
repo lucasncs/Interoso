@@ -9,7 +9,7 @@ namespace Seven.StateMachine
 			//SetState(new GenericState(this));
 		}
 
-		private void Update()
+		protected virtual void Update()
 		{
 			currentState.Tick();
 		}

@@ -10,7 +10,6 @@ public class PatrolState : State<EnemyStateMachine>
 
 	public override void OnStateEnter()
 	{
-		machine.GetComponentInChildren<SpriteRenderer>().color = Color.green;
 		nextDestination = machine.patrolWaypoints[waypointIndex];
 	}
 

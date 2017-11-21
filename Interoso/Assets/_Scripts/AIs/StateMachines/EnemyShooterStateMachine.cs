@@ -14,8 +14,9 @@ public class EnemyShooterStateMachine : EnemyStateMachine
 		_shot = GetComponent<Shooter>();
 	}
 
-	public override void Attack()
+	public override void Attack(bool attk = true)
 	{
+		base.Attack(attk);
 		_shot.Shoot(FaceDirection);
 	}
 }

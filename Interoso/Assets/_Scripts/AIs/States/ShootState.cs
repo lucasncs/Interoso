@@ -11,9 +11,10 @@ public class ShootState : State<EnemyStateMachine>
 
 	public override void OnStateEnter()
 	{
-		machine.GetComponentInChildren<SpriteRenderer>().color = Color.red;
 		machine.LookToPlayer();
 		machine.StopMoving();
+
+		machine.Animation.AttackState = true;
 
 		timer = 0;
 	}
@@ -29,11 +30,18 @@ public class ShootState : State<EnemyStateMachine>
 		}
 
 		machine.LookToPlayer();
+		machine.Animation.AttackState = true;
 
 
 		if (!machine.InRangeForDetection())
 		{
 			machine.SetState(machine.PatrolState);
 		}
+	}
+
+	public override void OnStateExit()
+	{
+		machine.Attack(false);
+		machine.Animation.AttackState = false;
 	}
 }
