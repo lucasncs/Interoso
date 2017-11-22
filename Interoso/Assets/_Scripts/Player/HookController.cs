@@ -77,6 +77,7 @@ public class HookController : MonoBehaviour
 	
 	public void Stop()
 	{
+		isHooked = false;
 		Enabled = false;
 	}
 }

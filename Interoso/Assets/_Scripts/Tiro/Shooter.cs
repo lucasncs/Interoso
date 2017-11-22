@@ -28,7 +28,7 @@ public class Shooter : MonoBehaviour
 		{
 			foreach (Transform muzzle in muzzles)
 			{
-				var s = GoShot(muzzle.position);
+				var s = GoShot(muzzle.position, muzzle.rotation);
 				s.GetComponent<BulletScript>().speed *= sign;
 			}
 		}
@@ -36,6 +36,10 @@ public class Shooter : MonoBehaviour
 
 	protected GameObject GoShot(Vector2 pos)
 	{
-		return Instantiate(shot, pos, Quaternion.identity);
+		return GoShot(pos, Quaternion.identity);
+	}
+	protected GameObject GoShot(Vector2 pos, Quaternion rot)
+	{
+		return Instantiate(shot, pos, rot);
 	}
 }

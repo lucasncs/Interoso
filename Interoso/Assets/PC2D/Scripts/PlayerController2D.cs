@@ -8,12 +8,15 @@ using UnityEngine;
 public class PlayerController2D : MonoBehaviour
 {
 	private PlatformerMotor2D _motor;
+	private PlayerAnimationController _visual;
 	private bool _restored = true;
 	private bool _enableOneWayPlatforms;
 	private bool _oneWayPlatformsAreWalls;
 
 	private Rigidbody2D _body2D;
 	private HookController _hook;
+	[SerializeField]
+	private ArmRotation _arm;
 
 	private Shooter _shot;
 	
@@ -24,6 +27,7 @@ public class PlayerController2D : MonoBehaviour
 		_body2D = GetComponent<Rigidbody2D>();
 		_hook = GetComponent<HookController>();
 		_shot = GetComponent<Shooter>();
+		_visual = GetComponent<PlayerAnimationController>();
 	}
 
 	void Update()
@@ -42,6 +46,11 @@ public class PlayerController2D : MonoBehaviour
 			Jump();
 		}
 
+		//if (_visual.Jump &&_motor.motorState == PlatformerMotor2D.MotorState.OnGround)
+		//{
+		//	_visual.Jump = false;
+		//}
+
 		_motor.jumpingHeld = Input.GetButton(PC2D.Input.JUMP);
 		#endregion
 
@@ -59,10 +68,12 @@ public class PlayerController2D : MonoBehaviour
 		if (Mathf.Abs(Input.GetAxis(PC2D.Input.HORIZONTAL)) > PC2D.Globals.INPUT_THRESHOLD)
 		{
 			_motor.normalizedXMovement = Input.GetAxis(PC2D.Input.HORIZONTAL);
+			_visual.Walk = true;
 		}
 		else
 		{
 			_motor.normalizedXMovement = 0;
+			_visual.Walk = false;
 		}
 
 		if (Input.GetAxis(PC2D.Input.VERTICAL) != 0)
@@ -128,7 +139,7 @@ public class PlayerController2D : MonoBehaviour
 			if (Input.GetButtonDown(PC2D.Input.JUMP))
 			{
 				//_body2D.velocity += Vector2.right * Mathf.Sign(dir);
-				//_body2D.AddForce(Vector2.right * Mathf.Sign(dir) * 20);
+				_body2D.AddForce(Vector2.right * Mathf.Sign(dir) * 30);
 				StartCoroutine(StopVelocity());
 				_motor.enabled = true;
 				_hook.Stop();
@@ -138,16 +149,22 @@ public class PlayerController2D : MonoBehaviour
 
 		if (Input.GetButtonDown(PC2D.Input.SHOOT) && !_motor.frozen)
 		{
-			_shot.Shoot(_motor.facingLeft ? -1 : 1);
 			_motor.frozen = true;
+			int dir = _motor.facingLeft ? -1 : 1;
+			_arm.Aim(dir);
+			_shot.Shoot(dir);
 			this.Invoke(() => _motor.frozen = false, .6f);
 		}
 	}
 
 	private void Jump()
 	{
+		_visual.Jump = true;
+
 		_motor.Jump();
 		_motor.DisableRestrictedArea();
+
+		StartCoroutine(EndJump());
 	}
 
 	IEnumerator StopVelocity()
@@ -155,10 +172,20 @@ public class PlayerController2D : MonoBehaviour
 		while (_motor.collidingAgainst == PlatformerMotor2D.CollidedSurface.None)
 		{
 			//_body2D.velocity = Vector2.down * 2;
-			_body2D.velocity = new Vector2(Mathf.Clamp(_body2D.velocity.x, -5, 5), -2);
+			//_body2D.velocity = new Vector2(Mathf.Clamp(_body2D.velocity.x, -5, 5), -2);
+			//_body2D.velocity = new Vector2(_body2D.velocity.x, -1);
 			yield return null;
 		}
 		_body2D.velocity = Vector2.zero;
+	}
+
+	IEnumerator EndJump()
+	{
+		while (_visual.Jump && _motor.motorState != PlatformerMotor2D.MotorState.OnGround)
+		{
+			yield return null;
+		}
+		_visual.Jump = false;
 	}
 
 	// before enter en freedom state for ladders
