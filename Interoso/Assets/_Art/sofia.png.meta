@@ -1,0 +1,1118 @@
+fileFormatVersion: 2
+guid: 7ba6fce2c2d77aa48a4f8e7c2452bd7b
+timeCreated: 1511317707
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sofia_0
+    21300002: sofia_1
+    21300004: sofia_2
+    21300006: sofia_3
+    21300008: sofia_4
+    21300010: sofia_5
+    21300012: sofia_6
+    21300014: sofia_7
+    21300016: sofia_8
+    21300018: sofia_9
+    21300020: sofia_10
+    21300022: sofia_11
+    21300024: sofia_12
+    21300026: sofia_13
+    21300028: sofia_attk_1
+    21300030: sofia_15
+    21300032: sofia_16
+    21300034: sofia_17
+    21300036: sofia_18
+    21300038: sofia_19
+    21300040: sofia_20
+    21300042: sofia_21
+    21300044: sofia_22
+    21300046: sofia_23
+    21300048: sofia_24
+    21300050: sofia_25
+    21300052: sofia_26
+    21300054: sofia_27
+    21300056: sofia_28
+    21300058: sofia_29
+    21300060: sofia_30
+    21300062: sofia_attk_2
+    21300064: sofia_32
+    21300066: sofia_whip_1
+    21300068: sofia_whip_5
+    21300070: sofia_attk_3
+    21300072: sofia_36
+    21300074: sofia_37
+    21300076: sofia_38
+    21300078: sofia_whip_2
+    21300080: sofia_whip_6
+    21300082: sofia_attk_4
+    21300084: sofia_42
+    21300086: sofia_43
+    21300088: sofia_44
+    21300090: sofia_whip_3
+    21300092: sofia_whip_7
+    21300094: sofia_attk_5
+    21300096: sofia_48
+    21300098: sofia_49
+    21300100: sofia_50
+    21300102: sofia_whip_4
+    21300104: sofia_attk_6
+    21300106: sofia_53
+    21300108: sofia_54
+    21300110: sofia_55
+    21300112: sofia_attk_7
+    21300114: sofia_57
+    21300116: sofia_58
+    21300118: sofia_59
+    21300120: sofia_60
+    21300122: sofia_attk_8
+    21300124: sofia_62
+    21300126: sofia_63
+    21300128: sofia_64
+    21300130: sofia_65
+    21300132: sofia_attk_9
+    21300134: sofia_attk_10
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 90
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sofia_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1859
+        width: 87
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1859
+        width: 84
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_2
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1859
+        width: 84
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1859
+        width: 84
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_4
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1859
+        width: 84
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_5
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 1859
+        width: 85
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_6
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 1859
+        width: 85
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_7
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 1859
+        width: 84
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_8
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1859
+        width: 94
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_9
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1859
+        width: 94
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_10
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1859
+        width: 94
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_11
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 1859
+        width: 93
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_12
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1849
+        width: 72
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_13
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 1849
+        width: 72
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_attk_1
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1827
+        width: 144
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1639
+        width: 115
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1450
+        width: 204
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_17
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1639
+        width: 115
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_18
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1639
+        width: 115
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_19
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1639
+        width: 115
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_20
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1450
+        width: 203
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_21
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1639
+        width: 115
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_22
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1639
+        width: 114
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_23
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1639
+        width: 114
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_24
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1639
+        width: 114
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_25
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1639
+        width: 114
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_26
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1639
+        width: 114
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_27
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1639
+        width: 114
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_28
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 1639
+        width: 99
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_29
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 1639
+        width: 99
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_30
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 1639
+        width: 99
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_attk_2
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1624
+        width: 145
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_32
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1450
+        width: 203
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_whip_1
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1400
+        width: 528
+        height: 226
+      alignment: 9
+      pivot: {x: 0.37580085, y: 0.3954495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_whip_5
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 1400
+        width: 527
+        height: 225
+      alignment: 9
+      pivot: {x: 0.38277614, y: 0.37238553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_attk_3
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1420
+        width: 146
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_36
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1260
+        width: 203
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_37
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1260
+        width: 203
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_38
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1260
+        width: 203
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_whip_2
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1161
+        width: 528
+        height: 226
+      alignment: 9
+      pivot: {x: 0.3506464, y: 0.35155925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_whip_6
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 1160
+        width: 527
+        height: 226
+      alignment: 9
+      pivot: {x: 0.3857204, y: 0.37902075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_attk_4
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1219
+        width: 145
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_42
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1071
+        width: 206
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_43
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1071
+        width: 203
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_44
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1071
+        width: 203
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_whip_3
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 922
+        width: 528
+        height: 226
+      alignment: 9
+      pivot: {x: 0.3827673, y: 0.42245916}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_whip_7
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 921
+        width: 527
+        height: 226
+      alignment: 9
+      pivot: {x: 0.3807936, y: 0.3774803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_attk_5
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1016
+        width: 145
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_48
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 776
+        width: 169
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_49
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 778
+        width: 166
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_50
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 778
+        width: 166
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_whip_4
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 680
+        width: 528
+        height: 228
+      alignment: 9
+      pivot: {x: 0.3928091, y: 0.37200847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_attk_6
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 811
+        width: 151
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_53
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 486
+        width: 166
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_54
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 486
+        width: 166
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_55
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 486
+        width: 166
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_attk_7
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 617
+        width: 144
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_57
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 226
+        width: 391
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_58
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 226
+        width: 388
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_59
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 226
+        width: 387
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_60
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 226
+        width: 388
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_attk_8
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 413
+        width: 144
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_62
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8
+        width: 388
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_63
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 8
+        width: 388
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_64
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 8
+        width: 388
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_65
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 8
+        width: 388
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_attk_9
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 210
+        width: 144
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sofia_attk_10
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 7
+        width: 144
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
