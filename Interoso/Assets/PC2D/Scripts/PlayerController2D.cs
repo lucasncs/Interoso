@@ -150,11 +150,17 @@ public class PlayerController2D : MonoBehaviour
 		if (Input.GetButtonDown(PC2D.Input.SHOOT) && !_motor.frozen)
 		{
 			_motor.frozen = true;
+			_visual.Attack = true;
 			int dir = _motor.facingLeft ? -1 : 1;
 			_arm.Aim(dir);
 			_shot.Shoot(dir);
-			this.Invoke(() => _motor.frozen = false, .6f);
+			this.Invoke(() => { _motor.frozen = false;/* _visual.Attack = false; */}, 1.1f);
 		}
+	}
+
+	private void LateUpdate()
+	{
+
 	}
 
 	private void Jump()

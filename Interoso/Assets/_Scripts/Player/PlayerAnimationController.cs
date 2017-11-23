@@ -13,7 +13,10 @@ public class PlayerAnimationController : AnimationController
 	{
 		set
 		{
-			_animator.SetBool("Attack", value);
+			if (value)
+				_animator.SetTrigger("Attack");
+			else
+				_animator.ResetTrigger("Attack");
 		}
 	}
 

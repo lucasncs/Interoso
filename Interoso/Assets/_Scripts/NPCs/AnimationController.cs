@@ -44,6 +44,28 @@ public class AnimationController : MonoBehaviour
 	protected virtual void Update()
 	{
 		// Facing
+		//float valueCheck = _motor.normalizedXMovement;
+
+		//if (TurnCondictions)
+		//{
+		//	valueCheck = _motor.velocity.x;
+		//}
+
+		//if (Mathf.Abs(valueCheck) >= 0.1f)
+		//{
+		//	//Vector3 newScale = visualChild.transform.localScale;
+		//	//newScale.x = Mathf.Abs(newScale.x) * ((valueCheck > 0) ? 1.0f : -1.0f);
+		//	//visualChild.transform.localScale = newScale;
+		//	SetCurrentFacing((valueCheck > 0) ? 1 : -1);
+		//}
+
+		//Vector3 newScale2 = visualChild.transform.localScale;
+		//newScale2.x = Mathf.Abs(newScale2.x) * (_motor.facingLeft ? -1.0f : 1.0f);
+		//visualChild.transform.localScale = newScale2;
+	}
+
+	private void LateUpdate()
+	{
 		float valueCheck = _motor.normalizedXMovement;
 
 		if (TurnCondictions)
@@ -53,16 +75,10 @@ public class AnimationController : MonoBehaviour
 
 		if (Mathf.Abs(valueCheck) >= 0.1f)
 		{
-			//Vector3 newScale = visualChild.transform.localScale;
-			//newScale.x = Mathf.Abs(newScale.x) * ((valueCheck > 0) ? 1.0f : -1.0f);
-			//visualChild.transform.localScale = newScale;
 			SetCurrentFacing((valueCheck > 0) ? 1 : -1);
 		}
-
-		//Vector3 newScale2 = visualChild.transform.localScale;
-		//newScale2.x = Mathf.Abs(newScale2.x) * (_motor.facingLeft ? -1.0f : 1.0f);
-		//visualChild.transform.localScale = newScale2;
 	}
+
 
 	protected void SetCurrentFacingLeft()
 	{

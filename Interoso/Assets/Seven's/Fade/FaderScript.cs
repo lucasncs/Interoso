@@ -16,14 +16,16 @@ public class FaderScript : MonoBehaviour
 
 	private Texture2D myTex;
 
-	void Start()
+	private void Start()
 	{
 		myTex = new Texture2D(1, 1);
 		myTex.SetPixel(0, 0, fadeColor);
 		myTex.Apply();
+
+		SceneManager.sceneLoaded += OnSceneLoaded;
 	}
 
-	void OnGUI ()
+	private void OnGUI ()
 	{
 		if (!start) return;
 		isSwitchScenes = execWhenDone != null ? false : true;
@@ -51,8 +53,13 @@ public class FaderScript : MonoBehaviour
 		}
 	}
 
-	void OnLevelWasLoaded ()
+	private void OnSceneLoaded (Scene scene, LoadSceneMode loadSceneMode)
 	{
 		isFadeIn = true;
+	}
+
+	private void OnDestroy()
+	{
+		SceneManager.sceneLoaded -= OnSceneLoaded;
 	}
 }
