@@ -28,7 +28,7 @@ namespace PC2D
             _mpMotor = GetComponent<MovingPlatformMotor2D>();
             _mpMotor.onPlatformerMotorContact += PlayerContact;
 
-            _renderer = GetComponent<SpriteRenderer>();
+            _renderer = GetComponentInChildren<SpriteRenderer>();
             _originalColor = _renderer.color;
         }
 

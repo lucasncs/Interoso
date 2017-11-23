@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Inimigo Zumbi
   m_EditorClassIdentifier: 
   _color: {r: 0.078431375, g: 0.4, b: 0.13333334, a: 1}
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 1303397863836172, guid: 68eb29f70e60a5748bd960ca7d178eeb, type: 2}
   _firstSibling: 0

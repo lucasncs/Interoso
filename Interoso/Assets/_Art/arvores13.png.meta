@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 96fbc76e408bd0c458c67f638da6778e
-timeCreated: 1511304540
+timeCreated: 1511355709
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,8 @@ TextureImporter:
     21300002: arvores13_1
     21300004: arvores13_2
     21300006: arvores13_3
+    21300008: arvores13_4
+    21300010: arvores13_5
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -144,6 +146,34 @@ TextureImporter:
         y: 4913
         width: 312
         height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: arvores13_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 3483
+        width: 496
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: arvores13_5
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 3484
+        width: 500
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d292c0145c5f44b95b6a421e83e573, type: 3}
+  m_Name: Floor LVL 4
+  m_EditorClassIdentifier: 
+  _color: {r: 0.25490198, g: 0.26666668, b: 0.2627451, a: 1}
+  _prefab: {fileID: 0}
+  _firstSibling: 0
+  randomPrefabs:
+  - {fileID: 1342451562914920, guid: 3d021b365a0b8274c9678254a2a9ac15, type: 2}
+  - {fileID: 1342451562914920, guid: e85e0cb7ad4c4324ea2d0fb67a886179, type: 2}

@@ -17,7 +17,7 @@ public class LevelGenerator : MonoBehaviour
 
 	public void GenerateLevel()
 	{
-		EmptyLevel();
+		//EmptyLevel();
 
         for (int x = 0; x < map.width; x++)
 		{

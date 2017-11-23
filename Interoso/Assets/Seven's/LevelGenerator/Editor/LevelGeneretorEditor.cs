@@ -10,14 +10,14 @@ public class LevelGeneretorEditor : Editor
 
 		bool _lock = myTarget.transform.childCount <= 0;
 
-		GUI.enabled = _lock;
+		//GUI.enabled = _lock;
 
 		if (GUILayout.Button("Load Level"))
 		{
 			myTarget.GenerateLevel();
 		}
 
-		GUI.enabled = !_lock;
+		//GUI.enabled = !_lock;
 
 		if (GUILayout.Button("UnLoad Level"))
 		{
