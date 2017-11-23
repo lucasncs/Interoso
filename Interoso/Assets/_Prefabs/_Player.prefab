@@ -134,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1222018343122070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 6, z: 0}
+  m_LocalPosition: {x: 5.15, y: 27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4460559376994088}
@@ -320,11 +320,11 @@ MonoBehaviour:
   jumpWindowWhenFalling: 0.2
   jumpWindowWhenActivated: 0.2
   enableSlopes: 1
-  angleAllowedForMoving: 50
+  angleAllowedForMoving: 75
   minimumSpeedToMoveUpSlipperySlope: 7.5
   changeSpeedOnSlopes: 1
   speedMultiplierOnSlope: 0.75
-  stickOnGround: 1
+  stickOnGround: 0
   distanceToCheckToStick: 0.4
   enableWallJumps: 0
   wallJumpMultiplier: 1
