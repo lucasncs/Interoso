@@ -23,7 +23,7 @@ public class CameraFollow : MonoBehaviour
 			target = GameObject.FindWithTag("Player").transform;
 	}
 
-	void Update()
+	void LateUpdate()
 	{
 		float cameraHalfWidth = thisCamera.orthographicSize * ((float)Screen.width / Screen.height);
 		Vector3 pos = transform.position;
@@ -31,5 +31,17 @@ public class CameraFollow : MonoBehaviour
 		pos.y = Mathf.Clamp(target.position.y, min.y + thisCamera.orthographicSize, max.y - thisCamera.orthographicSize);
 
 		transform.position = pos;
+	}
+
+	public void SetBounds(BoxCollider2D b)
+	{
+		bounds = b;
+		min = bounds.bounds.min;
+		max = bounds.bounds.max;
+	}
+
+	public void SetTarget(Transform t)
+	{
+		target = t;
 	}
 }

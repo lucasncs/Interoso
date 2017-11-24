@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlatformerMotor2D))]
 public class PlayerController2D : MonoBehaviour
 {
-	private PlatformerMotor2D _motor;
+	protected PlatformerMotor2D _motor;
 	private PlayerAnimationController _visual;
 	private bool _restored = true;
 	private bool _enableOneWayPlatforms;
@@ -17,17 +18,31 @@ public class PlayerController2D : MonoBehaviour
 	private HookController _hook;
 	[SerializeField]
 	private ArmRotation _arm;
+	protected StatsController _stats;
 
 	private Shooter _shot;
-	
 
-	void Start()
+	private void Awake()
 	{
 		_motor = GetComponent<PlatformerMotor2D>();
 		_body2D = GetComponent<Rigidbody2D>();
 		_hook = GetComponent<HookController>();
 		_shot = GetComponent<Shooter>();
 		_visual = GetComponent<PlayerAnimationController>();
+		_stats = GetComponent<PlayerStats>();
+	}
+
+
+	protected virtual void Start()
+	{
+		_stats.OnTakeDamage += OnTakeDamage;
+		//_stats.OnDeath += OnDeath;
+	}
+
+	private void OnDisable()
+	{
+		_stats.OnTakeDamage -= OnTakeDamage;
+		_stats.OnDeath -= OnDeath;
 	}
 
 	void Update()
@@ -158,11 +173,6 @@ public class PlayerController2D : MonoBehaviour
 		}
 	}
 
-	private void LateUpdate()
-	{
-
-	}
-
 	private void Jump()
 	{
 		_visual.Jump = true;
@@ -192,6 +202,20 @@ public class PlayerController2D : MonoBehaviour
 			yield return null;
 		}
 		_visual.Jump = false;
+	}
+
+	private void OnTakeDamage(int dmg)
+	{
+		_visual.Damage = true;
+		this.Invoke(() => _visual.Damage = false, _visual.damageDuration);
+	}
+
+	private void OnDeath()
+	{
+		GetComponent<BoxCollider2D>().enabled = false;
+		_motor.enabled = false;
+		_visual.Death = true;
+		this.Invoke(() => Fade.Initialize(Color.black, 2.5f, UnityEngine.SceneManagement.SceneManager.GetActiveScene().name), 1);
 	}
 
 	// before enter en freedom state for ladders

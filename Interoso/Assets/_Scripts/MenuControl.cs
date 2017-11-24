@@ -5,6 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class MenuControl : MonoBehaviour
 {
+	public GameObject pauseMenu;
+
+	private bool isPaused;
+
+	private void Start()
+	{
+		UnPauseGame();
+	}
+
+	private void Update()
+	{
+		if (Input.GetButtonDown("Cancel"))
+		{
+			if (!isPaused)
+				PauseGame();
+			else
+				UnPauseGame();
+		}
+	}
+
 	public void ChangeScene(string lvlName)
 	{
 		Fade.Initialize(Color.black, 1, lvlName);
@@ -12,12 +32,16 @@ public class MenuControl : MonoBehaviour
 
 	public void PauseGame()
 	{
+		isPaused = true;
 		Time.timeScale = 0;
+		if (pauseMenu != null) pauseMenu.SetActive(true);
 	}
 
 	public void UnPauseGame()
 	{
+		isPaused = false;
 		Time.timeScale = 1;
+		if (pauseMenu != null) pauseMenu.SetActive(false);
 	}
 
 	public void QuitGame()

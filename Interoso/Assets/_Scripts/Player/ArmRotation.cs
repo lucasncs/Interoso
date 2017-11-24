@@ -6,6 +6,7 @@ public class ArmRotation : MonoBehaviour
 {
 	public int rotationOffset = 90;
 	public Vector2 clampRotation;
+	public bool invert;
 
 	private Animator _anim;
 	
@@ -18,7 +19,10 @@ public class ArmRotation : MonoBehaviour
 	{
 		_anim.SetTrigger("Attack");
 
-		Vector3 difference = dir > 0 ? Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position : transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+
+		Vector3 difference = !invert ? (dir > 0 ? Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position : transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition))
+			: (dir < 0 ? transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition) : Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
 		difference.Normalize();
 
 		float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;

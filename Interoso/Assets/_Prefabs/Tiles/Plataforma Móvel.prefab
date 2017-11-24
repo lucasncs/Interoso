@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4813847380010262}
   - component: {fileID: 61483829382644632}
+  - component: {fileID: 114006430874511210}
+  - component: {fileID: 114814093890993852}
   m_Layer: 8
   m_Name: "Plataforma M\xF3vel"
   m_TagString: Untagged
@@ -50,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1774600343440088}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4813847380010262}
@@ -62,14 +64,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033344385304476}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.22, y: 28, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 181.99, y: 28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4497337252648362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &61483829382644632
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -95,6 +97,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 2.9955401}
   m_EdgeRadius: 0
+--- !u!114 &114006430874511210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1033344385304476}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c8b3be95cbc664d878010fe07e12f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 0, y: -5}
+--- !u!114 &114814093890993852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1033344385304476}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ba8290a9a67b14c841505bd5aa7a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 1
 --- !u!212 &212651216438443148
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -126,7 +152,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300006, guid: 5fbdd50bb68e08945bff19e3e76bca28, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

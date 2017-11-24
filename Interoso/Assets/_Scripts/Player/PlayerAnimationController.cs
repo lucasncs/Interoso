@@ -70,6 +70,14 @@ public class PlayerAnimationController : AnimationController
 		}
 	}
 
+	public bool Death
+	{
+		set
+		{
+			_animator.SetBool("Death", value);
+		}
+	}
+
 	protected override void Start()
 	{
 		base.Start();

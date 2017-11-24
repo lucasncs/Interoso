@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5fbdd50bb68e08945bff19e3e76bca28
-timeCreated: 1511374480
+timeCreated: 1511487502
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,9 @@ TextureImporter:
     21300004: arvores16_2
     21300006: arvores16_3
     21300008: arvores16_4
+    21300010: arvores16_5
+    21300012: arvores16_6
+    21300014: arvores16_7
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -143,6 +146,48 @@ TextureImporter:
         y: 1262
         width: 1103
         height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: arvores16_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 2736
+        width: 134
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 54, y: 0, z: 54, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: arvores16_6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 2921
+        width: 825
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: arvores16_7
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 2850
+        width: 268
+        height: 268
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

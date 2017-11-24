@@ -143,7 +143,7 @@ public class EnemyStateMachine : StateMachine<EnemyStateMachine>
 	}
 
 
-	private void OnTakeDamage()
+	private void OnTakeDamage(int dmg)
 	{
 		_visual.Damage = true;
 		this.Invoke(() => _visual.Damage = false, _visual.damageDuration);

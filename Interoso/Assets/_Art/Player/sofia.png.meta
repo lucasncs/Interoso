@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7ba6fce2c2d77aa48a4f8e7c2452bd7b
-timeCreated: 1511383592
+timeCreated: 1511479683
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -23,11 +23,11 @@ TextureImporter:
     21300032: sofia_idle_2
     21300034: sofia_attk_1
     21300036: sofia_jump_1
-    21300038: sofia_19
+    21300038: sofia_death_1
     21300040: sofia_jump_2
     21300042: sofia_jump_3
     21300044: sofia_jump_4
-    21300046: sofia_23
+    21300046: sofia_death_3
     21300048: sofia_jump_5
     21300050: sofia_jump_6
     21300052: sofia_jump_7
@@ -93,6 +93,13 @@ TextureImporter:
     21300172: sofia_68
     21300174: sofia_attk_9
     21300176: sofia_attk_10
+    21300178: sofia_death_2
+    21300180: sofia_death_4
+    21300182: sofia_death_5
+    21300184: sofia_death_6
+    21300186: sofia_death_7
+    21300188: sofia_death_8
+    21300190: sofia_death_9
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -432,15 +439,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sofia_19
+      name: sofia_death_1
       rect:
         serializedVersion: 2
         x: 6
         y: 1450
         width: 203
         height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,15 +495,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sofia_23
+      name: sofia_death_3
       rect:
         serializedVersion: 2
         x: 441
         y: 1450
         width: 203
         height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -656,15 +663,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sofia_35
+      name: sofia_death_2
       rect:
         serializedVersion: 2
         x: 224
         y: 1450
         width: 203
         height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -712,43 +719,43 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sofia_39
+      name: sofia_death_4
       rect:
         serializedVersion: 2
         x: 6
         y: 1260
         width: 203
         height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sofia_40
+      name: sofia_death_5
       rect:
         serializedVersion: 2
         x: 223
         y: 1260
         width: 203
         height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sofia_41
+      name: sofia_death_6
       rect:
         serializedVersion: 2
         x: 440
         y: 1260
         width: 203
         height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -796,43 +803,43 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sofia_45
+      name: sofia_death_7
       rect:
         serializedVersion: 2
         x: 4
         y: 1071
         width: 206
         height: 177
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sofia_46
+      name: sofia_death_8
       rect:
         serializedVersion: 2
         x: 223
         y: 1071
         width: 203
         height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: sofia_47
+      name: sofia_death_9
       rect:
         serializedVersion: 2
         x: 440
         y: 1071
         width: 203
         height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

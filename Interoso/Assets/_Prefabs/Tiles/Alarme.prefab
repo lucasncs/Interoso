@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4144032131457254}
   - component: {fileID: 212342329799817444}
-  - component: {fileID: 61202341642875128}
+  - component: {fileID: 114605556517769450}
   m_Layer: 8
   m_Name: Alarme
   m_TagString: Untagged
@@ -35,26 +35,29 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1368783518991796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 29, y: 5.342, z: 0}
+  m_LocalScale: {x: 1.19, y: 1.1899999, z: 1.1899999}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61202341642875128
-BoxCollider2D:
+--- !u!114 &114605556517769450
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1368783518991796}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c19cf9a23052164fbe3c46f7d6b06d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcs: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!212 &212342329799817444
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -85,8 +88,15 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3efef4657b5061448894ba6ca77b2646, type: 3}
-  m_Color: {r: 0.83137256, g: 0.29803923, b: 0.24313726, a: 1}
+  m_Sprite: {fileID: 21300006, guid: 545dd6a618afbf34e8c371bbd7ad03c3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

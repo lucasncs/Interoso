@@ -16,6 +16,8 @@ public class FaderScript : MonoBehaviour
 
 	private Texture2D myTex;
 
+	private AsyncOperation async;
+
 	private void Start()
 	{
 		myTex = new Texture2D(1, 1);
@@ -43,7 +45,11 @@ public class FaderScript : MonoBehaviour
 		if (alpha >= 1 && !isFadeIn) //Fade OUT - 0.5
 		{
 			if (execWhenDone != null) execWhenDone(); //Executa as acoes
-			else SceneManager.LoadSceneAsync(sceneToLoad);
+			else
+			{
+				if (async == null)
+					async = SceneManager.LoadSceneAsync(sceneToLoad);
+			}
 			DontDestroyOnLoad(gameObject);
 			if (!isSwitchScenes) isFadeIn = true;
 		}

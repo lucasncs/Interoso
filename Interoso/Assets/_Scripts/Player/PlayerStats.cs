@@ -7,15 +7,15 @@ public class PlayerStats : StatsController<StatWithBar>
 {
 	protected override void Awake()
 	{
-		//base.Awake();
-		health.Initialize();
+		base.Awake();
+		//health.Initialize();
 	}
 
-	protected override void Death()
-	{
-		base.Death();
-		gameObject.SetActive(false);
-	}
+	//protected override void Death()
+	//{
+	//	base.Death();
+	//	gameObject.SetActive(false);
+	//}
 
 	void OnTriggerEnter2D(Collider2D hit)
 	{
@@ -31,9 +31,19 @@ public class PlayerStats : StatsController<StatWithBar>
 			hit.GetComponent<BulletDestroyScript>().Destroy();
 		}
 
+		if (hit.gameObject.CompareTag("Hurt"))
+		{
+			Damage(10);
+		}
+
 		if (hit.gameObject.CompareTag("Life"))
 		{
 			health.Value = health.MaxVal;
+			Destroy(hit.gameObject);
+		}
+
+		if (hit.gameObject.CompareTag("Page"))
+		{
 			Destroy(hit.gameObject);
 		}
 	}

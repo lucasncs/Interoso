@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
 using Seven.Stats;
 
-public class StatsController<T> : MonoBehaviour where T : Stat
+public class StatsController<T> : StatsController where T : Stat
 {
 	[SerializeField]
 	protected T health;
-
-	public System.Action OnTakeDamage;
-	public System.Action OnDeath;
 
 	public T Health
 	{
@@ -26,16 +23,26 @@ public class StatsController<T> : MonoBehaviour where T : Stat
 	{
 		health.Value -= dmg;
 
-		if (OnTakeDamage != null)
-			OnTakeDamage();
-
 		if (health.Value <= 0)
 			Death();
+		else
+			if (OnTakeDamage != null)
+				OnTakeDamage(dmg);
 	}
 
 	protected virtual void Death()
 	{
+		Dead = true;
+
 		if (OnDeath != null)
 			OnDeath();
 	}
+}
+
+public class StatsController : MonoBehaviour
+{
+	public bool Dead { get; protected set; }
+
+	public System.Action<int> OnTakeDamage;
+	public System.Action OnDeath;
 }
