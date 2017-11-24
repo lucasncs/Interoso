@@ -15,15 +15,11 @@ Cada zumbi deve ser matado com a sua específica cor do choque> zumbi verde (bar
 
 <h2>Inimigos</h2>
 
-* **HUMANO:** atira, mais veloz, menos resistência.
+* **INDIO:** atira, mais veloz, menos resistência.
 
-* **ZUMBI VERDE:** mais lento, mais resistência, consegue infectar os humanos.
+* **ROBO:** melee, mais lento, mais resistência, consegue infectar os humanos.
 
-* **ZUMBI VERMELHO:** 2x o verde.
-
-* **ZUMBI ROXO:** 2x o vermelho.
-
-* **BOSS:** ainda estamos pensando sobre!!
+* **BOSS:** player inverso.
 
 <h2>Coletáveis</h2>
 O Player coletará as baterias (munição) para o chicote, vida (autômatos) e livrinhos contendo explicações!!
