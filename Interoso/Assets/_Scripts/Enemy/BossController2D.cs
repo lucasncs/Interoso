@@ -9,7 +9,8 @@ public class BossController2D : PlayerController2D
 	{
 		_stats = GetComponent<EnemyStats>();
 
-		base.Start();
+		_stats.OnTakeDamage += OnTakeDamage;
+		//base.Start();
 	}
 
 	private void LateUpdate()

@@ -19339,7 +19339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 1
   fadeDamp: 1
-  sceneToLoad: Level_2
+  sceneToLoad: Level_3
   alpha: 0
   fadeColor: {r: 0.35294116, g: 0, b: 0, a: 1}
   isFadeIn: 0
@@ -43288,6 +43288,10 @@ Prefab:
         type: 2}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143752338441974, guid: bfc7b336dad97454eb6ac968ccc65287, type: 2}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfc7b336dad97454eb6ac968ccc65287, type: 2}

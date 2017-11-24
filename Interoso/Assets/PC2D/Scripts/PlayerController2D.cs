@@ -36,7 +36,7 @@ public class PlayerController2D : MonoBehaviour
 	protected virtual void Start()
 	{
 		_stats.OnTakeDamage += OnTakeDamage;
-		//_stats.OnDeath += OnDeath;
+		_stats.OnDeath += OnDeath;
 	}
 
 	private void OnDisable()
@@ -204,13 +204,13 @@ public class PlayerController2D : MonoBehaviour
 		_visual.Jump = false;
 	}
 
-	private void OnTakeDamage(int dmg)
+	protected void OnTakeDamage(int dmg)
 	{
 		_visual.Damage = true;
 		this.Invoke(() => _visual.Damage = false, _visual.damageDuration);
 	}
 
-	private void OnDeath()
+	protected void OnDeath()
 	{
 		GetComponent<BoxCollider2D>().enabled = false;
 		_motor.enabled = false;
