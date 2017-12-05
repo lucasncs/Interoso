@@ -213,8 +213,8 @@ MonoBehaviour:
   lerpSpeed: 10
   content: {fileID: 114152408475972828}
   valueText: {fileID: 0}
-  fullColor: {r: 0.5294118, g: 0.7368492, b: 0.21960784, a: 1}
-  lowColor: {r: 0.83823526, g: 0.16025086, b: 0.16025086, a: 1}
+  fullColor: {r: 0, g: 0.5764706, b: 0.5137255, a: 1}
+  lowColor: {r: 0.7482759, g: 0.14305274, b: 0.14305274, a: 1}
   lerpColors: 1
   scaleBar: 0
 --- !u!114 &114848311332120100
@@ -303,7 +303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 89.3, y: -84.4}
+  m_AnchoredPosition: {x: 89.299805, y: -84.4}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224289104269582390
@@ -361,7 +361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 53.2, y: -49.8}
+  m_AnchoredPosition: {x: 53.200195, y: -49.8}
   m_SizeDelta: {x: 470.5, y: 68}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224862456190869450

@@ -8,15 +8,26 @@ public class PlayerAnimationController : AnimationController
 
 	public float damageDuration = .5f;
 
+	public AudioSource _source;
+	public AudioEvent attackSound;
 
+	private bool attack;
 	public bool Attack
 	{
+		get
+		{
+			return attack;
+		}
 		set
 		{
 			if (value)
+			{
 				_animator.SetTrigger("Attack");
+				attackSound.Play(_source);
+			}
 			else
 				_animator.ResetTrigger("Attack");
+			attack = value;
 		}
 	}
 

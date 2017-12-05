@@ -18,4 +18,9 @@ public class Options : MonoBehaviour
 	{
 		mainMixer.SetFloat("MusicVolume", volumeSlider.value);
 	}
+
+	public void SFXVolumeUpdate(Slider volumeSlider)
+	{
+		mainMixer.SetFloat("SfxVolume", volumeSlider.value);
+	}
 }

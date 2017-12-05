@@ -7,6 +7,9 @@ public class MenuControl : MonoBehaviour
 {
 	public GameObject pauseMenu;
 
+	public AudioSource _source;
+	public AudioEvent hoverButton;
+
 	private bool isPaused;
 
 	private void Start()
@@ -51,5 +54,10 @@ public class MenuControl : MonoBehaviour
 #else
 		Fade.Initialize(Color.black, 5, Application.Quit);
 #endif
+	}
+
+	public void PlayHover()
+	{
+		hoverButton.Play(_source);
 	}
 }

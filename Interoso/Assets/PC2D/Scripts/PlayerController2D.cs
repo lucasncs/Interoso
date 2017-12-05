@@ -66,6 +66,8 @@ public class PlayerController2D : MonoBehaviour
 		//	_visual.Jump = false;
 		//}
 
+		_visual.Jump = _motor.IsInAir() && !_visual.Attack ? true : false;
+
 		_motor.jumpingHeld = Input.GetButton(PC2D.Input.JUMP);
 		#endregion
 
@@ -178,9 +180,9 @@ public class PlayerController2D : MonoBehaviour
 		_visual.Jump = true;
 
 		_motor.Jump();
-		_motor.DisableRestrictedArea();
+		//_motor.DisableRestrictedArea();
 
-		StartCoroutine(EndJump());
+		//StartCoroutine(EndJump());
 	}
 
 	IEnumerator StopVelocity()
@@ -197,7 +199,7 @@ public class PlayerController2D : MonoBehaviour
 
 	IEnumerator EndJump()
 	{
-		while (_visual.Jump && _motor.motorState != PlatformerMotor2D.MotorState.OnGround)
+		while (_visual.Jump && _motor.IsInAir())
 		{
 			yield return null;
 		}
