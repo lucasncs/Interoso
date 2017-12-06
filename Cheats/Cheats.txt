@@ -1,0 +1,14 @@
+APERTAR ' PARA ABRIR O CONSOLE
+================================
+
+
+CHEATS
+================================
+
+Invencível: immortal
+
+Carregar uma Scene: loadscene name NOME_DA_SCENE
+
+Recarregar level: reload
+
+Ajuda sobre o console: help

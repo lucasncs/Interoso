@@ -43,5 +43,7 @@ public class ShootState : State<EnemyStateMachine>
 	{
 		machine.Attack(false);
 		machine.Animation.AttackState = false;
+
+		timer = 0;
 	}
 }

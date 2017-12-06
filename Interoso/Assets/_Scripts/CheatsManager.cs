@@ -6,7 +6,7 @@ public class CheatsManager : MonoBehaviour
 {
 	private PlayerStats player;
 
-	public bool playerImortal;
+	public static bool playerImortal;
 
 	private void Awake()
 	{

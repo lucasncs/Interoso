@@ -333,9 +333,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 1
   fadeDamp: 5
-  sceneToLoad: Main_Menu
+  sceneToLoad: Credits
   alpha: 0
-  fadeColor: {r: 0, g: 0, b: 0, a: 0}
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
   isFadeIn: 0
   isSwitchScenes: 0
 --- !u!114 &373731490
@@ -443,7 +443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &950540033
 AudioSource:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

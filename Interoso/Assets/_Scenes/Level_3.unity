@@ -1382,7 +1382,7 @@ Prefab:
     - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
         type: 2}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4144032131457254, guid: 8d4e79a4588a2ec4588fdbf484da81de, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1540,6 +1540,46 @@ Prefab:
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 860360020}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 82834238238458454, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82834238238458454, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d4e79a4588a2ec4588fdbf484da81de, type: 2}
   m_IsPrefabParent: 0
@@ -1549,6 +1589,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 27280153}
   m_Script: {fileID: 11500000, guid: 0c19cf9a23052164fbe3c46f7d6b06d2, type: 3}
+--- !u!82 &27280155 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82834238238458454, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+    type: 2}
+  m_PrefabInternal: {fileID: 27280153}
 --- !u!4 &27352268 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4078518032135424, guid: e1cd4a4661b3c764ab25153fb996ccc5,
@@ -5998,7 +6043,7 @@ Prefab:
     - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
         type: 2}
       propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4729791907520794, guid: 0f9d139d7d2bdf24da39e19f64f888ab, type: 2}
       propertyPath: m_LocalPosition.x
@@ -6126,6 +6171,21 @@ Prefab:
         type: 2}
       propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_IntArgument
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: TriggerDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9d139d7d2bdf24da39e19f64f888ab, type: 2}
@@ -16582,7 +16642,7 @@ Prefab:
     - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
         type: 2}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4144032131457254, guid: 8d4e79a4588a2ec4588fdbf484da81de, type: 2}
       propertyPath: m_LocalPosition.x
@@ -16730,6 +16790,46 @@ Prefab:
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 860360020}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 82834238238458454, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82834238238458454, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d4e79a4588a2ec4588fdbf484da81de, type: 2}
   m_IsPrefabParent: 0
@@ -16739,6 +16839,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 358515880}
   m_Script: {fileID: 11500000, guid: 0c19cf9a23052164fbe3c46f7d6b06d2, type: 3}
+--- !u!82 &358515882 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82834238238458454, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+    type: 2}
+  m_PrefabInternal: {fileID: 358515880}
 --- !u!4 &358586543 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4078518032135424, guid: e1cd4a4661b3c764ab25153fb996ccc5,
@@ -19978,6 +20083,80 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80757a32eafba5448b2989995dc51893, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &419403250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 419403253}
+  - component: {fileID: 419403252}
+  - component: {fileID: 419403251}
+  m_Layer: 0
+  m_Name: Dialog Trigger (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &419403251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 419403250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26617ff0a4e1d8a42a7a2c035d6d17f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "Este corpo \xE9 apenas uma casca e voc ainda florescer\xE1 como um ser maior."
+    OnDialogEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+--- !u!61 &419403252
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 419403250}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 12}
+  m_EdgeRadius: 0
+--- !u!4 &419403253
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 419403250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.99, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &421445482
 Prefab:
   m_ObjectHideFlags: 0
@@ -20951,6 +21130,80 @@ Transform:
   m_PrefabParentObject: {fileID: 4078518032135424, guid: e1cd4a4661b3c764ab25153fb996ccc5,
     type: 2}
   m_PrefabInternal: {fileID: 1166383433}
+--- !u!1 &445073245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 445073248}
+  - component: {fileID: 445073247}
+  - component: {fileID: 445073246}
+  m_Layer: 0
+  m_Name: Dialog Trigger (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &445073246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 445073245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26617ff0a4e1d8a42a7a2c035d6d17f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "Seu verdadeiro \"eu\" ser\xE1 revelado ainda, minha crian\xE7a."
+    OnDialogEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+--- !u!61 &445073247
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 445073245}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 12}
+  m_EdgeRadius: 0
+--- !u!4 &445073248
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 445073245}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 360.35, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &446945454
 Prefab:
   m_ObjectHideFlags: 0
@@ -37902,7 +38155,7 @@ Prefab:
     - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
         type: 2}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4144032131457254, guid: 8d4e79a4588a2ec4588fdbf484da81de, type: 2}
       propertyPath: m_LocalPosition.x
@@ -38001,6 +38254,46 @@ Prefab:
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 860360020}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 114605556517769450, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 82834238238458454, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82834238238458454, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d4e79a4588a2ec4588fdbf484da81de, type: 2}
   m_IsPrefabParent: 0
@@ -38010,6 +38303,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 860360018}
   m_Script: {fileID: 11500000, guid: 0c19cf9a23052164fbe3c46f7d6b06d2, type: 3}
+--- !u!82 &860360020 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82834238238458454, guid: 8d4e79a4588a2ec4588fdbf484da81de,
+    type: 2}
+  m_PrefabInternal: {fileID: 860360018}
 --- !u!4 &860746446 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4078518032135424, guid: b9f39d8a9f9036c4fa38e10062ce398b,
@@ -47700,6 +47998,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 271621674}
     m_Modifications:
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4729791907520794, guid: 0f9d139d7d2bdf24da39e19f64f888ab, type: 2}
       propertyPath: m_LocalPosition.x
       value: 217.09
@@ -47751,6 +48054,36 @@ Prefab:
         type: 2}
       propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 860360020}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9d139d7d2bdf24da39e19f64f888ab, type: 2}
@@ -48538,6 +48871,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 271621674}
     m_Modifications:
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4729791907520794, guid: 0f9d139d7d2bdf24da39e19f64f888ab, type: 2}
       propertyPath: m_LocalPosition.x
       value: 251.06
@@ -48589,6 +48927,36 @@ Prefab:
         type: 2}
       propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 358515882}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f9d139d7d2bdf24da39e19f64f888ab, type: 2}
@@ -51415,7 +51783,7 @@ Prefab:
     - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
         type: 2}
       propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4729791907520794, guid: 0f9d139d7d2bdf24da39e19f64f888ab, type: 2}
       propertyPath: m_LocalPosition.x
@@ -51527,6 +51895,66 @@ Prefab:
     - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
         type: 2}
       propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 2049743729}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: TriggerDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[6].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[6].m_Target
+      value: 
+      objectReference: {fileID: 27280155}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 114180646733603494, guid: 0f9d139d7d2bdf24da39e19f64f888ab,
+        type: 2}
+      propertyPath: DoWhenInteract.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -57698,6 +58126,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489736578301128, guid: b8501a0661bdf7346b1d1ec352772de2, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8501a0661bdf7346b1d1ec352772de2, type: 2}
@@ -67651,6 +68083,84 @@ Transform:
   m_PrefabParentObject: {fileID: 4078518032135424, guid: e1cd4a4661b3c764ab25153fb996ccc5,
     type: 2}
   m_PrefabInternal: {fileID: 133437110}
+--- !u!1 &1625759193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1625759196}
+  - component: {fileID: 1625759195}
+  - component: {fileID: 1625759194}
+  m_Layer: 0
+  m_Name: Dialog Trigger (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1625759194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625759193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c19cf9a23052164fbe3c46f7d6b06d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcs:
+  - {fileID: 2120424408}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1625759195}
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &1625759195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625759193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26617ff0a4e1d8a42a7a2c035d6d17f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "\xC9 um caminho sem volta, minha crian\xE7a."
+    OnDialogEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+--- !u!4 &1625759196
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625759193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.499496, y: 9.481452, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1626258861
 Prefab:
   m_ObjectHideFlags: 0
@@ -71896,6 +72406,81 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1cd4a4661b3c764ab25153fb996ccc5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1746832700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1746832703}
+  - component: {fileID: 1746832702}
+  - component: {fileID: 1746832701}
+  m_Layer: 0
+  m_Name: Dialog Trigger (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1746832701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1746832700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26617ff0a4e1d8a42a7a2c035d6d17f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - A verdade e o conhecimento nem sempre satisfaz nosos aseios
+    - mas sim mostram o que realmente somos!!
+    OnDialogEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+--- !u!61 &1746832702
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1746832700}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 12}
+  m_EdgeRadius: 0
+--- !u!4 &1746832703
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1746832700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 351.76, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1749842021 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4078518032135424, guid: e1cd4a4661b3c764ab25153fb996ccc5,
@@ -78517,6 +79102,70 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1cd4a4661b3c764ab25153fb996ccc5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1921691372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1921691375}
+  - component: {fileID: 1921691374}
+  - component: {fileID: 1921691373}
+  m_Layer: 0
+  m_Name: Dialog Trigger (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1921691373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921691372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26617ff0a4e1d8a42a7a2c035d6d17f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "Suas escolhas mostraram quem voce realmente \xE9!!"
+    OnDialogEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+--- !u!58 &1921691374
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921691372}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 6
+--- !u!4 &1921691375
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921691372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 154.41, y: 14.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1922203923 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4078518032135424, guid: e1cd4a4661b3c764ab25153fb996ccc5,
@@ -80409,7 +81058,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -83841,6 +84490,80 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1cd4a4661b3c764ab25153fb996ccc5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2042588346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2042588349}
+  - component: {fileID: 2042588348}
+  - component: {fileID: 2042588347}
+  m_Layer: 0
+  m_Name: Dialog Trigger (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2042588347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042588346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26617ff0a4e1d8a42a7a2c035d6d17f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "Agora que chegou at\xE9 aqui, a verdade ser\xE1 revelada."
+    OnDialogEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+--- !u!61 &2042588348
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042588346}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 12}
+  m_EdgeRadius: 0
+--- !u!4 &2042588349
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042588346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 332.7, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2043428522
 Prefab:
   m_ObjectHideFlags: 0
@@ -84225,6 +84948,54 @@ Transform:
   m_PrefabParentObject: {fileID: 4078518032135424, guid: e1cd4a4661b3c764ab25153fb996ccc5,
     type: 2}
   m_PrefabInternal: {fileID: 1514476579}
+--- !u!1 &2049743728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2049743730}
+  - component: {fileID: 2049743729}
+  m_Layer: 0
+  m_Name: Dialog Trigger (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2049743729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2049743728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26617ff0a4e1d8a42a7a2c035d6d17f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "Matar seu semelhante n\xE3o a far\xE1 melhor que ele..."
+    OnDialogEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+--- !u!4 &2049743730
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2049743728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -98.538216, y: 7.741452, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2050069286 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4078518032135424, guid: e1cd4a4661b3c764ab25153fb996ccc5,

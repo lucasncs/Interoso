@@ -171,7 +171,7 @@ public class PlayerController2D : MonoBehaviour
 			int dir = _motor.facingLeft ? -1 : 1;
 			_arm.Aim(dir);
 			_shot.Shoot(dir);
-			this.Invoke(() => { _motor.frozen = false;/* _visual.Attack = false; */}, 1.1f);
+			this.Invoke(() => { _motor.frozen = false; _visual.Attack = false; }, 1.1f);
 		}
 	}
 
